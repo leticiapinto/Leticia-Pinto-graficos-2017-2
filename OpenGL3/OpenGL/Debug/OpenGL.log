@@ -1,0 +1,4 @@
+﻿  Application.cpp
+c:\users\lab-maestria-13\documents\projects\opengl\opengl\src\vertexpositions.h(111): warning C4018: '<': signed/unsigned mismatch
+c:\users\lab-maestria-13\documents\projects\opengl\opengl\src\vertexpositions.h(124): warning C4018: '<': signed/unsigned mismatch
+  OpenGL.vcxproj -> C:\Users\Lab-Maestria-13\Documents\Projects\OpenGL\Debug\OpenGL.exe
