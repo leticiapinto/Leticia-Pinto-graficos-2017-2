@@ -1,5 +1,6 @@
-#version 330 core
-out vec4 FragColor;
+//#version 330 core
+#version 120
+//out vec4 FragColor;
 
 struct Material {
     vec3 ambient;
@@ -44,8 +45,8 @@ struct SpotLight {
 };
 
 
-in vec3 FragPos;
-in vec3 Normal;
+varying vec3 FragPos;
+varying vec3 Normal;
 
 uniform vec3 viewPos;
 uniform DirLight dirLight;
@@ -76,7 +77,8 @@ void main()
     }
 
     result = result + globalLightColor*material.ambient;
-    FragColor = vec4(result, 1.0);
+    //FragColor = vec4(result, 1.0);
+    gl_FragColor = vec4(result, 1.0);
 }
 
 // calculates the color when using a directional light.
