@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/leticia/Music/OPENGL
+CMAKE_SOURCE_DIR = /home/leticia/Videos/OPENGL
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/leticia/Music/OPENGL
+CMAKE_BINARY_DIR = /home/leticia/Videos/OPENGL
 
 # Include any dependencies generated for this target.
 include trabajo2/CMakeFiles/main_5.out.dir/depend.make
@@ -59,16 +59,16 @@ include trabajo2/CMakeFiles/main_5.out.dir/flags.make
 
 trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
 trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o: trabajo2/main_5.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/main_5.cpp.o -c /home/leticia/Music/OPENGL/trabajo2/main_5.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Videos/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/main_5.cpp.o -c /home/leticia/Videos/OPENGL/trabajo2/main_5.cpp
 
 trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/main_5.cpp.i"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/OPENGL/trabajo2/main_5.cpp > CMakeFiles/main_5.out.dir/main_5.cpp.i
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Videos/OPENGL/trabajo2/main_5.cpp > CMakeFiles/main_5.out.dir/main_5.cpp.i
 
 trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/main_5.cpp.s"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/OPENGL/trabajo2/main_5.cpp -o CMakeFiles/main_5.out.dir/main_5.cpp.s
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Videos/OPENGL/trabajo2/main_5.cpp -o CMakeFiles/main_5.out.dir/main_5.cpp.s
 
 trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o.requires:
 
@@ -81,196 +81,196 @@ trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o.provides: trabajo2/CMakeFiles/ma
 trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o.provides.build: trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o
 
 
-trabajo2/CMakeFiles/main_5.out.dir/LWindow.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
-trabajo2/CMakeFiles/main_5.out.dir/LWindow.cpp.o: trabajo2/LWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/LWindow.cpp.o"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/LWindow.cpp.o -c /home/leticia/Music/OPENGL/trabajo2/LWindow.cpp
+trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
+trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o: trabajo2/Window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Videos/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/Window.cpp.o -c /home/leticia/Videos/OPENGL/trabajo2/Window.cpp
 
-trabajo2/CMakeFiles/main_5.out.dir/LWindow.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/LWindow.cpp.i"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/OPENGL/trabajo2/LWindow.cpp > CMakeFiles/main_5.out.dir/LWindow.cpp.i
+trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/Window.cpp.i"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Videos/OPENGL/trabajo2/Window.cpp > CMakeFiles/main_5.out.dir/Window.cpp.i
 
-trabajo2/CMakeFiles/main_5.out.dir/LWindow.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/LWindow.cpp.s"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/OPENGL/trabajo2/LWindow.cpp -o CMakeFiles/main_5.out.dir/LWindow.cpp.s
+trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/Window.cpp.s"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Videos/OPENGL/trabajo2/Window.cpp -o CMakeFiles/main_5.out.dir/Window.cpp.s
 
-trabajo2/CMakeFiles/main_5.out.dir/LWindow.cpp.o.requires:
+trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o.requires:
 
-.PHONY : trabajo2/CMakeFiles/main_5.out.dir/LWindow.cpp.o.requires
+.PHONY : trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o.requires
 
-trabajo2/CMakeFiles/main_5.out.dir/LWindow.cpp.o.provides: trabajo2/CMakeFiles/main_5.out.dir/LWindow.cpp.o.requires
-	$(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/LWindow.cpp.o.provides.build
-.PHONY : trabajo2/CMakeFiles/main_5.out.dir/LWindow.cpp.o.provides
+trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o.provides: trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o.requires
+	$(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o.provides.build
+.PHONY : trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o.provides
 
-trabajo2/CMakeFiles/main_5.out.dir/LWindow.cpp.o.provides.build: trabajo2/CMakeFiles/main_5.out.dir/LWindow.cpp.o
-
-
-trabajo2/CMakeFiles/main_5.out.dir/LShaderManager.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
-trabajo2/CMakeFiles/main_5.out.dir/LShaderManager.cpp.o: trabajo2/LShaderManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/LShaderManager.cpp.o"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/LShaderManager.cpp.o -c /home/leticia/Music/OPENGL/trabajo2/LShaderManager.cpp
-
-trabajo2/CMakeFiles/main_5.out.dir/LShaderManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/LShaderManager.cpp.i"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/OPENGL/trabajo2/LShaderManager.cpp > CMakeFiles/main_5.out.dir/LShaderManager.cpp.i
-
-trabajo2/CMakeFiles/main_5.out.dir/LShaderManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/LShaderManager.cpp.s"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/OPENGL/trabajo2/LShaderManager.cpp -o CMakeFiles/main_5.out.dir/LShaderManager.cpp.s
-
-trabajo2/CMakeFiles/main_5.out.dir/LShaderManager.cpp.o.requires:
-
-.PHONY : trabajo2/CMakeFiles/main_5.out.dir/LShaderManager.cpp.o.requires
-
-trabajo2/CMakeFiles/main_5.out.dir/LShaderManager.cpp.o.provides: trabajo2/CMakeFiles/main_5.out.dir/LShaderManager.cpp.o.requires
-	$(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/LShaderManager.cpp.o.provides.build
-.PHONY : trabajo2/CMakeFiles/main_5.out.dir/LShaderManager.cpp.o.provides
-
-trabajo2/CMakeFiles/main_5.out.dir/LShaderManager.cpp.o.provides.build: trabajo2/CMakeFiles/main_5.out.dir/LShaderManager.cpp.o
+trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o.provides.build: trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o
 
 
-trabajo2/CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
-trabajo2/CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.o: trabajo2/LVertexBuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.o"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.o -c /home/leticia/Music/OPENGL/trabajo2/LVertexBuffer.cpp
+trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
+trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o: trabajo2/ShaderManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Videos/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/ShaderManager.cpp.o -c /home/leticia/Videos/OPENGL/trabajo2/ShaderManager.cpp
 
-trabajo2/CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.i"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/OPENGL/trabajo2/LVertexBuffer.cpp > CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.i
+trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/ShaderManager.cpp.i"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Videos/OPENGL/trabajo2/ShaderManager.cpp > CMakeFiles/main_5.out.dir/ShaderManager.cpp.i
 
-trabajo2/CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.s"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/OPENGL/trabajo2/LVertexBuffer.cpp -o CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.s
+trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/ShaderManager.cpp.s"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Videos/OPENGL/trabajo2/ShaderManager.cpp -o CMakeFiles/main_5.out.dir/ShaderManager.cpp.s
 
-trabajo2/CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.o.requires:
+trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o.requires:
 
-.PHONY : trabajo2/CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.o.requires
+.PHONY : trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o.requires
 
-trabajo2/CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.o.provides: trabajo2/CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.o.requires
-	$(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.o.provides.build
-.PHONY : trabajo2/CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.o.provides
+trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o.provides: trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o.requires
+	$(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o.provides.build
+.PHONY : trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o.provides
 
-trabajo2/CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.o.provides.build: trabajo2/CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.o
-
-
-trabajo2/CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
-trabajo2/CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.o: trabajo2/LIndexBuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.o"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.o -c /home/leticia/Music/OPENGL/trabajo2/LIndexBuffer.cpp
-
-trabajo2/CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.i"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/OPENGL/trabajo2/LIndexBuffer.cpp > CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.i
-
-trabajo2/CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.s"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/OPENGL/trabajo2/LIndexBuffer.cpp -o CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.s
-
-trabajo2/CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.o.requires:
-
-.PHONY : trabajo2/CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.o.requires
-
-trabajo2/CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.o.provides: trabajo2/CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.o.requires
-	$(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.o.provides.build
-.PHONY : trabajo2/CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.o.provides
-
-trabajo2/CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.o.provides.build: trabajo2/CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.o
+trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o.provides.build: trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o
 
 
-trabajo2/CMakeFiles/main_5.out.dir/LVertexArray.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
-trabajo2/CMakeFiles/main_5.out.dir/LVertexArray.cpp.o: trabajo2/LVertexArray.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/LVertexArray.cpp.o"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/LVertexArray.cpp.o -c /home/leticia/Music/OPENGL/trabajo2/LVertexArray.cpp
+trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
+trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o: trabajo2/VertexBuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Videos/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o -c /home/leticia/Videos/OPENGL/trabajo2/VertexBuffer.cpp
 
-trabajo2/CMakeFiles/main_5.out.dir/LVertexArray.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/LVertexArray.cpp.i"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/OPENGL/trabajo2/LVertexArray.cpp > CMakeFiles/main_5.out.dir/LVertexArray.cpp.i
+trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/VertexBuffer.cpp.i"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Videos/OPENGL/trabajo2/VertexBuffer.cpp > CMakeFiles/main_5.out.dir/VertexBuffer.cpp.i
 
-trabajo2/CMakeFiles/main_5.out.dir/LVertexArray.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/LVertexArray.cpp.s"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/OPENGL/trabajo2/LVertexArray.cpp -o CMakeFiles/main_5.out.dir/LVertexArray.cpp.s
+trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/VertexBuffer.cpp.s"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Videos/OPENGL/trabajo2/VertexBuffer.cpp -o CMakeFiles/main_5.out.dir/VertexBuffer.cpp.s
 
-trabajo2/CMakeFiles/main_5.out.dir/LVertexArray.cpp.o.requires:
+trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o.requires:
 
-.PHONY : trabajo2/CMakeFiles/main_5.out.dir/LVertexArray.cpp.o.requires
+.PHONY : trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o.requires
 
-trabajo2/CMakeFiles/main_5.out.dir/LVertexArray.cpp.o.provides: trabajo2/CMakeFiles/main_5.out.dir/LVertexArray.cpp.o.requires
-	$(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/LVertexArray.cpp.o.provides.build
-.PHONY : trabajo2/CMakeFiles/main_5.out.dir/LVertexArray.cpp.o.provides
+trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o.provides: trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o.requires
+	$(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o.provides.build
+.PHONY : trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o.provides
 
-trabajo2/CMakeFiles/main_5.out.dir/LVertexArray.cpp.o.provides.build: trabajo2/CMakeFiles/main_5.out.dir/LVertexArray.cpp.o
-
-
-trabajo2/CMakeFiles/main_5.out.dir/LMesh.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
-trabajo2/CMakeFiles/main_5.out.dir/LMesh.cpp.o: trabajo2/LMesh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/LMesh.cpp.o"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/LMesh.cpp.o -c /home/leticia/Music/OPENGL/trabajo2/LMesh.cpp
-
-trabajo2/CMakeFiles/main_5.out.dir/LMesh.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/LMesh.cpp.i"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/OPENGL/trabajo2/LMesh.cpp > CMakeFiles/main_5.out.dir/LMesh.cpp.i
-
-trabajo2/CMakeFiles/main_5.out.dir/LMesh.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/LMesh.cpp.s"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/OPENGL/trabajo2/LMesh.cpp -o CMakeFiles/main_5.out.dir/LMesh.cpp.s
-
-trabajo2/CMakeFiles/main_5.out.dir/LMesh.cpp.o.requires:
-
-.PHONY : trabajo2/CMakeFiles/main_5.out.dir/LMesh.cpp.o.requires
-
-trabajo2/CMakeFiles/main_5.out.dir/LMesh.cpp.o.provides: trabajo2/CMakeFiles/main_5.out.dir/LMesh.cpp.o.requires
-	$(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/LMesh.cpp.o.provides.build
-.PHONY : trabajo2/CMakeFiles/main_5.out.dir/LMesh.cpp.o.provides
-
-trabajo2/CMakeFiles/main_5.out.dir/LMesh.cpp.o.provides.build: trabajo2/CMakeFiles/main_5.out.dir/LMesh.cpp.o
+trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o.provides.build: trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o
 
 
-trabajo2/CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
-trabajo2/CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.o: trabajo2/LMeshBuilder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.o"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.o -c /home/leticia/Music/OPENGL/trabajo2/LMeshBuilder.cpp
+trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
+trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o: trabajo2/IndexBuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Videos/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o -c /home/leticia/Videos/OPENGL/trabajo2/IndexBuffer.cpp
 
-trabajo2/CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.i"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/OPENGL/trabajo2/LMeshBuilder.cpp > CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.i
+trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/IndexBuffer.cpp.i"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Videos/OPENGL/trabajo2/IndexBuffer.cpp > CMakeFiles/main_5.out.dir/IndexBuffer.cpp.i
 
-trabajo2/CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.s"
-	cd /home/leticia/Music/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/OPENGL/trabajo2/LMeshBuilder.cpp -o CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.s
+trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/IndexBuffer.cpp.s"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Videos/OPENGL/trabajo2/IndexBuffer.cpp -o CMakeFiles/main_5.out.dir/IndexBuffer.cpp.s
 
-trabajo2/CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.o.requires:
+trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o.requires:
 
-.PHONY : trabajo2/CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.o.requires
+.PHONY : trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o.requires
 
-trabajo2/CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.o.provides: trabajo2/CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.o.requires
-	$(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.o.provides.build
-.PHONY : trabajo2/CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.o.provides
+trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o.provides: trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o.requires
+	$(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o.provides.build
+.PHONY : trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o.provides
 
-trabajo2/CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.o.provides.build: trabajo2/CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.o
+trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o.provides.build: trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o
+
+
+trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
+trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o: trabajo2/VertexArray.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Videos/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/VertexArray.cpp.o -c /home/leticia/Videos/OPENGL/trabajo2/VertexArray.cpp
+
+trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/VertexArray.cpp.i"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Videos/OPENGL/trabajo2/VertexArray.cpp > CMakeFiles/main_5.out.dir/VertexArray.cpp.i
+
+trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/VertexArray.cpp.s"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Videos/OPENGL/trabajo2/VertexArray.cpp -o CMakeFiles/main_5.out.dir/VertexArray.cpp.s
+
+trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o.requires:
+
+.PHONY : trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o.requires
+
+trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o.provides: trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o.requires
+	$(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o.provides.build
+.PHONY : trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o.provides
+
+trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o.provides.build: trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o
+
+
+trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
+trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o: trabajo2/Mesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Videos/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/Mesh.cpp.o -c /home/leticia/Videos/OPENGL/trabajo2/Mesh.cpp
+
+trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/Mesh.cpp.i"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Videos/OPENGL/trabajo2/Mesh.cpp > CMakeFiles/main_5.out.dir/Mesh.cpp.i
+
+trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/Mesh.cpp.s"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Videos/OPENGL/trabajo2/Mesh.cpp -o CMakeFiles/main_5.out.dir/Mesh.cpp.s
+
+trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o.requires:
+
+.PHONY : trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o.requires
+
+trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o.provides: trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o.requires
+	$(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o.provides.build
+.PHONY : trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o.provides
+
+trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o.provides.build: trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o
+
+
+trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
+trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o: trabajo2/MeshBuilder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Videos/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o -c /home/leticia/Videos/OPENGL/trabajo2/MeshBuilder.cpp
+
+trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/MeshBuilder.cpp.i"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Videos/OPENGL/trabajo2/MeshBuilder.cpp > CMakeFiles/main_5.out.dir/MeshBuilder.cpp.i
+
+trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/MeshBuilder.cpp.s"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Videos/OPENGL/trabajo2/MeshBuilder.cpp -o CMakeFiles/main_5.out.dir/MeshBuilder.cpp.s
+
+trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o.requires:
+
+.PHONY : trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o.requires
+
+trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o.provides: trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o.requires
+	$(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o.provides.build
+.PHONY : trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o.provides
+
+trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o.provides.build: trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o
 
 
 # Object files for target main_5.out
 main_5_out_OBJECTS = \
 "CMakeFiles/main_5.out.dir/main_5.cpp.o" \
-"CMakeFiles/main_5.out.dir/LWindow.cpp.o" \
-"CMakeFiles/main_5.out.dir/LShaderManager.cpp.o" \
-"CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.o" \
-"CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.o" \
-"CMakeFiles/main_5.out.dir/LVertexArray.cpp.o" \
-"CMakeFiles/main_5.out.dir/LMesh.cpp.o" \
-"CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.o"
+"CMakeFiles/main_5.out.dir/Window.cpp.o" \
+"CMakeFiles/main_5.out.dir/ShaderManager.cpp.o" \
+"CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o" \
+"CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o" \
+"CMakeFiles/main_5.out.dir/VertexArray.cpp.o" \
+"CMakeFiles/main_5.out.dir/Mesh.cpp.o" \
+"CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o"
 
 # External object files for target main_5.out
 main_5_out_EXTERNAL_OBJECTS =
 
 trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o
-trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/LWindow.cpp.o
-trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/LShaderManager.cpp.o
-trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.o
-trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.o
-trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/LVertexArray.cpp.o
-trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/LMesh.cpp.o
-trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.o
+trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o
+trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o
+trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o
+trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o
+trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o
+trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o
+trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o
 trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/build.make
 trabajo2/main_5.out: /usr/lib/x86_64-linux-gnu/libGLU.so
 trabajo2/main_5.out: /usr/lib/x86_64-linux-gnu/libGL.so
@@ -283,8 +283,8 @@ trabajo2/main_5.out: /usr/lib/x86_64-linux-gnu/libICE.so
 trabajo2/main_5.out: /usr/lib/x86_64-linux-gnu/libX11.so
 trabajo2/main_5.out: /usr/lib/x86_64-linux-gnu/libXext.so
 trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leticia/Music/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable main_5.out"
-	cd /home/leticia/Music/OPENGL/trabajo2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main_5.out.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leticia/Videos/OPENGL/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable main_5.out"
+	cd /home/leticia/Videos/OPENGL/trabajo2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main_5.out.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 trabajo2/CMakeFiles/main_5.out.dir/build: trabajo2/main_5.out
@@ -292,21 +292,21 @@ trabajo2/CMakeFiles/main_5.out.dir/build: trabajo2/main_5.out
 .PHONY : trabajo2/CMakeFiles/main_5.out.dir/build
 
 trabajo2/CMakeFiles/main_5.out.dir/requires: trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o.requires
-trabajo2/CMakeFiles/main_5.out.dir/requires: trabajo2/CMakeFiles/main_5.out.dir/LWindow.cpp.o.requires
-trabajo2/CMakeFiles/main_5.out.dir/requires: trabajo2/CMakeFiles/main_5.out.dir/LShaderManager.cpp.o.requires
-trabajo2/CMakeFiles/main_5.out.dir/requires: trabajo2/CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.o.requires
-trabajo2/CMakeFiles/main_5.out.dir/requires: trabajo2/CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.o.requires
-trabajo2/CMakeFiles/main_5.out.dir/requires: trabajo2/CMakeFiles/main_5.out.dir/LVertexArray.cpp.o.requires
-trabajo2/CMakeFiles/main_5.out.dir/requires: trabajo2/CMakeFiles/main_5.out.dir/LMesh.cpp.o.requires
-trabajo2/CMakeFiles/main_5.out.dir/requires: trabajo2/CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.o.requires
+trabajo2/CMakeFiles/main_5.out.dir/requires: trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o.requires
+trabajo2/CMakeFiles/main_5.out.dir/requires: trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o.requires
+trabajo2/CMakeFiles/main_5.out.dir/requires: trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o.requires
+trabajo2/CMakeFiles/main_5.out.dir/requires: trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o.requires
+trabajo2/CMakeFiles/main_5.out.dir/requires: trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o.requires
+trabajo2/CMakeFiles/main_5.out.dir/requires: trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o.requires
+trabajo2/CMakeFiles/main_5.out.dir/requires: trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o.requires
 
 .PHONY : trabajo2/CMakeFiles/main_5.out.dir/requires
 
 trabajo2/CMakeFiles/main_5.out.dir/clean:
-	cd /home/leticia/Music/OPENGL/trabajo2 && $(CMAKE_COMMAND) -P CMakeFiles/main_5.out.dir/cmake_clean.cmake
+	cd /home/leticia/Videos/OPENGL/trabajo2 && $(CMAKE_COMMAND) -P CMakeFiles/main_5.out.dir/cmake_clean.cmake
 .PHONY : trabajo2/CMakeFiles/main_5.out.dir/clean
 
 trabajo2/CMakeFiles/main_5.out.dir/depend:
-	cd /home/leticia/Music/OPENGL && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/leticia/Music/OPENGL /home/leticia/Music/OPENGL/trabajo2 /home/leticia/Music/OPENGL /home/leticia/Music/OPENGL/trabajo2 /home/leticia/Music/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/leticia/Videos/OPENGL && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/leticia/Videos/OPENGL /home/leticia/Videos/OPENGL/trabajo2 /home/leticia/Videos/OPENGL /home/leticia/Videos/OPENGL/trabajo2 /home/leticia/Videos/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : trabajo2/CMakeFiles/main_5.out.dir/depend
 

@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/leticia/Music/OPENGL/trabajo2/LIndexBuffer.cpp" "/home/leticia/Music/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.o"
-  "/home/leticia/Music/OPENGL/trabajo2/LMesh.cpp" "/home/leticia/Music/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/LMesh.cpp.o"
-  "/home/leticia/Music/OPENGL/trabajo2/LMeshBuilder.cpp" "/home/leticia/Music/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.o"
-  "/home/leticia/Music/OPENGL/trabajo2/LShaderManager.cpp" "/home/leticia/Music/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/LShaderManager.cpp.o"
-  "/home/leticia/Music/OPENGL/trabajo2/LVertexArray.cpp" "/home/leticia/Music/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/LVertexArray.cpp.o"
-  "/home/leticia/Music/OPENGL/trabajo2/LVertexBuffer.cpp" "/home/leticia/Music/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.o"
-  "/home/leticia/Music/OPENGL/trabajo2/LWindow.cpp" "/home/leticia/Music/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/LWindow.cpp.o"
-  "/home/leticia/Music/OPENGL/trabajo2/main_5.cpp" "/home/leticia/Music/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o"
+  "/home/leticia/Videos/OPENGL/trabajo2/IndexBuffer.cpp" "/home/leticia/Videos/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o"
+  "/home/leticia/Videos/OPENGL/trabajo2/Mesh.cpp" "/home/leticia/Videos/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o"
+  "/home/leticia/Videos/OPENGL/trabajo2/MeshBuilder.cpp" "/home/leticia/Videos/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o"
+  "/home/leticia/Videos/OPENGL/trabajo2/ShaderManager.cpp" "/home/leticia/Videos/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o"
+  "/home/leticia/Videos/OPENGL/trabajo2/VertexArray.cpp" "/home/leticia/Videos/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o"
+  "/home/leticia/Videos/OPENGL/trabajo2/VertexBuffer.cpp" "/home/leticia/Videos/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o"
+  "/home/leticia/Videos/OPENGL/trabajo2/Window.cpp" "/home/leticia/Videos/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o"
+  "/home/leticia/Videos/OPENGL/trabajo2/main_5.cpp" "/home/leticia/Videos/OPENGL/trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

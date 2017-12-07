@@ -30,7 +30,7 @@ elseif( UNIX AND NOT APPLE )
     find_package( X11 REQUIRED )
     find_package( Threads REQUIRED )
     find_package( PkgConfig REQUIRED )
-    pkg_search_module( GLUT REQUIRED glut )
+    ##pkg_search_module( GLUT REQUIRED glut )
 
     include_directories( /usr/local/include )
     link_directories( /usr/local/lib )

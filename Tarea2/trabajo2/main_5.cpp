@@ -1,42 +1,50 @@
-#include "LWindow.h"
-#include "LShaderManager.h"
-#include "LVertexArray.h"
-#include "LVertexBuffer.h"
-#include "LIndexBuffer.h"
+#include "Window.h"
+#include "ShaderManager.h"
+#include "VertexArray.h"
+#include "VertexBuffer.h"
+#include "IndexBuffer.h"
 
-#include "LMeshBuilder.h"
-#include "LMesh.h"
+#include "MeshBuilder.h"
+#include "Mesh.h"
 
 #include <iostream>
 
 using namespace std;
 
-bool g_isWireframe = false;
-engine::LWindow _window;
-engine::LMesh* _sphere;
-float _rSphere=1.0f;
-vec3 A(3.0f, 1.0f, 5.0f);
-vec3 B(-1.0f, 1.0f, -4.0f);
-vec3 C(3.5f, 1.0f, -2.5f);
-vec3 AB(B-A);
-vec3 BC(C-B);
-vec3 CA(A-C);
-float _speed=0.05f;
-float angle=0.0f;
-int state=0;
-GLuint _pSimpleColor, _pLight;
-mat4 _viewMatrix(1.0f);
-mat4 _projMatrix(1.0f);
-engine::LMesh* _plane;
+bool wireframe_status = false;
+graphics::Window mywindow;
+graphics::Mesh* mysphere;
 
-vec3 _cameraPos;
-vec3 _cameraDir;
-vec3 _cameraTarget;
-vec3 _worldUp( 0.0f, 1.0f, 0.0f );
 
-float xCamera=7.0f, yCamera=3.0f, zCamera=-10.0f;
+float traslation_speed=0.08f;
+float sphere_angle=0.0f;
+int position_route=0;
+float radius_sphere=1.0f;
 
-static int menu_id, menu_enable_lighting_id, menu_shading_id, menu_lighting_id, menu_wireframe_id, menu_lightsource_id;
+
+vec3 APoint(3.0f, 1.0f, 5.0f);
+vec3 BPoint(-1.0f, 1.0f, -4.0f);
+vec3 CPoint(3.5f, 1.0f, -2.5f);
+
+vec3 DistanceAB(BPoint-APoint);
+vec3 DistanceBC(CPoint-BPoint);
+vec3 DistanceCA(APoint-CPoint);
+
+GLuint ShaderSimpleColor, ShaderMultiLighting;
+
+
+mat4 MView(1.0f);
+mat4 MProj(1.0f);
+graphics::Mesh* myplane;
+
+vec3 cameraPosition;
+vec3 cameraDirection;
+vec3 cameraTarget;
+vec3 VRUP( 0.0f, 1.0f, 0.0f );
+
+float xposCamera=7.0f, yposCamera=3.0f, zposCamera=-10.0f;
+
+static int menu_id, m_enable_lighting_id, m_shading_id, m_lighting_id, m_wireframe_id, m_lightsource_id;
 
 
 //options
@@ -44,18 +52,55 @@ GLuint _pShadingSphere;
 
 //variables del menu
 bool _is_b_activated=false;
-bool _ismoving=false;
-bool _islighting = false;
-bool _issmoothing = false;
-bool _iswireframe = false;
-bool _isspointsource = false;
+bool moving=false;
+bool lighting = false;
+bool smoothing = false;
+bool wireframe = false;
+bool spointsource = false;
 
 
-void menu(int option)
+void MenuELighting(int option)
+{
+	if (option == 0)
+	{
+		lighting = false;
+	}
+	else if (option == 1)
+	{
+		lighting = true;
+	}
+	glutPostRedisplay();
+}
+
+void MenuTypeShading(int option)
+{
+
+	if (option == 0)//flat
+	{
+		smoothing = false;
+	}
+	else if (option == 1)//smooth
+	{
+		smoothing = true;
+	}
+
+	mysphere->ReCalcNormal(smoothing);
+	glutPostRedisplay();
+}
+
+void MenuLighting(int option)
+{
+
+
+	glutPostRedisplay();
+}
+
+
+void MainMenu(int option)
 {
     if(option == 0)
     {
-        xCamera = 7.0f; yCamera = 3.0f; zCamera = -10.0f;
+        xposCamera = 7.0f; yposCamera = 3.0f; zposCamera = -10.0f;
     }
     else if(option == 1)
     {
@@ -64,110 +109,81 @@ void menu(int option)
     glutPostRedisplay();
 }
 
-void menu_enable_lighting(int option)
+
+
+void MenuEWireFrame(int option)
 {
     if(option == 0)
     {
-        _islighting = false;
-    }
-    else if( option == 1)
-    {
-        _islighting = true;
-    }
-    glutPostRedisplay();
-}
-
-void menu_shading(int option)
-{
-
-    if(option == 0)//flat
-    {
-        _issmoothing = false;
-    }
-    else if( option == 1)//smooth
-    {
-        _issmoothing = true;
-    }
-
-    _sphere->updateNormal(_issmoothing);
-    glutPostRedisplay();
-}
-
-void menu_lighting(int option)
-{
-
-    
-    glutPostRedisplay();
-}
-
-void menu_wireframe(int option)
-{
-    if(option == 0)
-    {
-        cout << "changed to wireframe" << endl;
-        _iswireframe = false;
+        cout << "wireframe" << endl;
+        wireframe = false;
         
     }
     else if( option == 1)
     {
-        _iswireframe = true;
-        cout << "changed to fill" << endl;
+        wireframe = true;
+        cout << "fill" << endl;
     }
     glutPostRedisplay();
 }
 
-void menu_lightsource(int option)
+void MenuLightSource(int option)
 {
     if(option == 0)
     {
-        cout << "changed to spot light" << endl;
-        _isspointsource = false;
+        cout << "spot light" << endl;
+        spointsource = false;
         
     }
     else if( option == 1)
     {
-        _isspointsource = true;
-        cout << "changed to point source" << endl;
+        spointsource = true;
+        cout << "point source" << endl;
     }
     glutPostRedisplay();
 }
 
-void createMenu(void){ 
+void BuildMenu(void){ 
 
 
     //sub menu
-    menu_enable_lighting_id = glutCreateMenu(menu_enable_lighting);
+    m_enable_lighting_id = glutCreateMenu(MenuELighting);
+
     glutAddMenuEntry("No", 0);
     glutAddMenuEntry("Yes", 1);
 
     //sub menu
-    menu_shading_id = glutCreateMenu(menu_shading);
+    m_shading_id = glutCreateMenu(MenuTypeShading);
+    
     glutAddMenuEntry("Flat shading", 0);
     glutAddMenuEntry("Smooth shading", 1);
 
     //sub menu
-    menu_lighting_id = glutCreateMenu(menu_lighting);
+    m_lighting_id = glutCreateMenu(MenuLighting);
+
     glutAddMenuEntry("No", 0);
     glutAddMenuEntry("Yes", 1);
 
     //sub menu
-    menu_wireframe_id = glutCreateMenu(menu_wireframe);
+    m_wireframe_id = glutCreateMenu(MenuEWireFrame);
+    
     glutAddMenuEntry("No", 0);
     glutAddMenuEntry("yes", 1);
 
     //submenu
-    menu_lightsource_id = glutCreateMenu(menu_lightsource);
+    m_lightsource_id = glutCreateMenu(MenuLightSource);
+    
     glutAddMenuEntry("Spot Light",0);
     glutAddMenuEntry("Point Source",1);
 
     //creating menu
-    menu_id = glutCreateMenu(menu);
+    menu_id = glutCreateMenu(MainMenu);
     glutAddMenuEntry("Default Wiew Point", 0);
-    glutAddSubMenu("Enable Lighting", menu_enable_lighting_id);
-    glutAddSubMenu("Shading", menu_shading_id);
-    glutAddSubMenu("Lighting", menu_lighting_id);
-    glutAddSubMenu("Wire Frame", menu_wireframe_id);
-    glutAddSubMenu("Light Source", menu_lightsource_id);
+    glutAddSubMenu("Enable Lighting", m_enable_lighting_id);
+    glutAddSubMenu("Shading", m_shading_id);
+    glutAddSubMenu("Lighting", m_lighting_id);
+    glutAddSubMenu("Wire Frame", m_wireframe_id);
+    glutAddSubMenu("Light Source", m_lightsource_id);
     glutAddMenuEntry("Quit", 1);
 
     glutAttachMenu(GLUT_LEFT_BUTTON);
@@ -175,104 +191,90 @@ void createMenu(void){
 } 
 
 
-void traslationSphere()
+void FuncTraslationSphere()
 {
     vec3 distance,from ,to;
-    if(state==0)//DE A a B
+    if(position_route==0)
     {
-        from=A;
-        to=B;
-        distance=AB;
+        from=APoint;
+        to=BPoint;
+        distance=DistanceAB;
     }
-    else if(state==1)
+    else if(position_route==1)
     {
-        from=B;
-        to=C;
-        distance=BC;
+        from=BPoint;
+        to=CPoint;
+        distance=DistanceBC;
     }
-    else if(state==2)
+    else if(position_route==2)
     {
-        from=C;
-        to=A;
-        distance=CA;
+        from=CPoint;
+        to=APoint;
+        distance=DistanceCA;
     }
     
     
 
-    vec3 delta =  normal(distance)*_speed;
-    _sphere->pos = _sphere->pos + delta;
+    vec3 dt =  normal(distance)*traslation_speed;
+    mysphere->pos = mysphere->pos + dt;
 
-    angle = (length(distance)*_speed*4/(_rSphere));
-    //cout<<"angle: "<<angle<<endl;
+    sphere_angle = (traslation_speed*length(distance)*4/(radius_sphere));
+    vec3 axisRotation = cross(vec3(0.0f,1.0f,0.0f), normal(distance));
+    normalize(axisRotation);
 
-    vec3 axisRot = cross(vec3(0.0f,1.0f,0.0f), normal(distance));
+    mat4 matrixRotation = Rotate(sphere_angle, axisRotation.x, axisRotation.y, axisRotation.z);
+    mysphere->myrotationMatrix = matrixRotation * mysphere->myrotationMatrix;
 
-    normalize(axisRot);
-
-    mat4 rotMatrix = Rotate(angle, axisRot.x, axisRot.y, axisRot.z);
-    _sphere->m_rotMatrix = rotMatrix * _sphere->m_rotMatrix;
-
-    if(length(_sphere->pos-from)>=length(distance))
+    if(length(mysphere->pos-from)>=length(distance))
     {
-        state++;
-        if(state>=3)
+        position_route++;
+        if(position_route>=3)
         {
-            state=0;
+            position_route=0;
         }
     }
 }
 
 void onKeyCallback( unsigned char key, int x, int y )
 {
-    if (key == 'w' || key =='W')
-    {
-        g_isWireframe=!g_isWireframe;
-        if(g_isWireframe)
-        {
-            cout << "changed to wireframe" << endl;
-            glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
-        }
-        else
-        {
-            cout << "changed to fill" << endl;
-            glPolygonMode( GL_FRONT_AND_BACK, GL_FILL );
-        }
-    }
-    else if( key == 'b' || key== 'B'){
-        _is_b_activated = true;
-    }
-    else if( key == 'x' )
-    {
-        xCamera--;
-    }
-    else if( key == 'X' )
-    {
-        xCamera++;
-    }
-    else if( key == 'y' )
-    {
-        yCamera--;
-    }
-    else if( key == 'Y' )
-    {
-        yCamera++;
-    }
-    else if( key == 'z' )
-    {
-        zCamera--;
-    }
-    else if( key == 'Z' )
-    {
-        zCamera++;
+
+    switch (key)
+   { 
+        case 'b':   
+            _is_b_activated = true;
+            break;
+        case 'B':
+            _is_b_activated = true;
+            break;
+        case 'x':  
+            xposCamera--;
+            break;
+        case 'X':
+            xposCamera++;
+            break;
+        case 'y':
+            yposCamera--;
+            break; 
+        case 'Y':
+            yposCamera++;
+            break;
+        case 'z':
+            zposCamera--;
+            break; 
+        case 'Z':
+            zposCamera++;
+            break;            
+        default:
+            break;
     }
 }
 
-void onMouseCallback( int button, int state, int x, int y )
+void onMouseCallback( int button, int position_route, int x, int y )
 {
     if(_is_b_activated)
     if (button == GLUT_RIGHT_BUTTON) {
-        if (state == GLUT_DOWN) {
-            _ismoving = !_ismoving;
+        if (position_route == GLUT_DOWN) {
+            moving = !moving;
         }
     }
 }
@@ -286,34 +288,34 @@ void onLoadCallBack()
 {
 
 
-    createMenu();
+    BuildMenu();
 
-    engine::LShaderManager::create();
-    _pSimpleColor = engine::LShaderManager::INSTANCE->programs["basiccolor"];
+    graphics::ShaderManager::create();
+    ShaderSimpleColor = graphics::ShaderManager::INSTANCE->programs["color"];
 
     //sphere
-    _pLight = engine::LShaderManager::INSTANCE->programs["multilighting"];
+    ShaderMultiLighting = graphics::ShaderManager::INSTANCE->programs["multilighting"];
     
 
-    _sphere = engine::LMeshBuilder::createFromFile( "../res/models/model_sphere_1024.obj", vec3(1.0f, 0.84f, 0.0f) );
+    mysphere = graphics::MeshBuilder::createFromFile( "../res/models/model_sphere_1024.obj", vec3(1.0f, 0.84f, 0.0f) );
 
 
-    std::vector <vec3> _vertexPlane;
-    _vertexPlane.push_back(vec3( 5.0f,0.0f,8.0f ) );
-    _vertexPlane.push_back(vec3( 5.0f,0.0f,-4.0f ) );
-    _vertexPlane.push_back(vec3( -5.0f,0.0f,-4.0f ) );
-    _vertexPlane.push_back(vec3( -5.0f,0.0f,8.0f ) ); 
+    std::vector <vec3> myvertexplane;
+    myvertexplane.push_back(vec3( 5.0f,0.0f,8.0f ) );
+    myvertexplane.push_back(vec3( 5.0f,0.0f,-4.0f ) );
+    myvertexplane.push_back(vec3( -5.0f,0.0f,-4.0f ) );
+    myvertexplane.push_back(vec3( -5.0f,0.0f,8.0f ) ); 
 
-    std::vector <vec3> _colorPlane;
+    std::vector <vec3> mycolorPlane;
     vec3 vertexColorPlane = vec3( 0.0f,1.0f,0.0f );
-    _colorPlane.push_back(vertexColorPlane);
-    _colorPlane.push_back(vertexColorPlane);
-    _colorPlane.push_back(vertexColorPlane);
-    _colorPlane.push_back(vertexColorPlane);
+    mycolorPlane.push_back(vertexColorPlane);
+    mycolorPlane.push_back(vertexColorPlane);
+    mycolorPlane.push_back(vertexColorPlane);
+    mycolorPlane.push_back(vertexColorPlane);
 
-    _plane = engine::LMeshBuilder::createPlane(  _vertexPlane , _colorPlane );
+    myplane = graphics::MeshBuilder::createPlane(  myvertexplane , mycolorPlane );
 
-    _sphere->pos = vec3( 3.0f, 1.0f, 5.0f );
+    mysphere->pos = vec3( 3.0f, 1.0f, 5.0f );
 
     
 
@@ -322,28 +324,28 @@ void onLoadCallBack()
 void onLoopCallBack()
 {
     //****camera control
-    _cameraPos=vec3( xCamera, yCamera, zCamera );
-    _cameraDir=vec3( -7.0f, -3.0f, 10.0f );
-    _cameraTarget = _cameraPos + _cameraDir;
+    cameraPosition=vec3( xposCamera, yposCamera, zposCamera );
+    cameraDirection=vec3( -7.0f, -3.0f, 10.0f );
+    cameraTarget = cameraPosition + cameraDirection;
 
-    _viewMatrix = LookAt(  _cameraPos, _cameraTarget,_worldUp );
-    _projMatrix = Perspective(  45.0f , (GLfloat) _window.width() / _window.height(),  0.5f, 100.0f );
+    MView = LookAt(  cameraPosition, cameraTarget,VRUP );
+    MProj = Perspective(  45.0f , (GLfloat) mywindow.width() / mywindow.height(),  0.5f, 100.0f );
     
     //*******************
 
     //sphere
     
-    if(_islighting)
+    if(lighting)
     {
-        _pShadingSphere = _pLight;
+        _pShadingSphere = ShaderMultiLighting;
     }
     else
     {
-        _pShadingSphere= _pSimpleColor;
+        _pShadingSphere= ShaderSimpleColor;
     }
 
 
-    if(_iswireframe)
+    if(wireframe)
     {
         glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
     }
@@ -354,181 +356,181 @@ void onLoopCallBack()
 
     
     glUseProgram( _pShadingSphere);
-    engine::LShaderManager::setMat4(_pShadingSphere, "u_tModel", _sphere->getModelMatrix());
-    engine::LShaderManager::setMat4(_pShadingSphere, "u_tView", _viewMatrix);
-    engine::LShaderManager::setMat4(_pShadingSphere, "u_tProj", _projMatrix);
+    graphics::ShaderManager::setMat4(_pShadingSphere, "u_tModel", mysphere->getModelMatrix());
+    graphics::ShaderManager::setMat4(_pShadingSphere, "u_tView", MView);
+    graphics::ShaderManager::setMat4(_pShadingSphere, "u_tProj", MProj);
 
 
-    engine::LShaderManager::setVec3(_pShadingSphere, "viewPos", _cameraPos);
+    graphics::ShaderManager::setVec3(_pShadingSphere, "viewPos", cameraPosition);
     //material params
-    engine::LShaderManager::setVec3(_pShadingSphere, "material.ambient", vec3(0.2f,0.2f,0.2f));
-    engine::LShaderManager::setVec3(_pShadingSphere, "material.diffuse", vec3(1.0f,0.84f,0.0f));
-    engine::LShaderManager::setVec3(_pShadingSphere, "material.specular", vec3(1.0f,0.84f,0.0f));
-    engine::LShaderManager::setFloat(_pShadingSphere, "material.shininess", 125.0f);
+    graphics::ShaderManager::setVec3(_pShadingSphere, "material.ambient", vec3(0.2f,0.2f,0.2f));
+    graphics::ShaderManager::setVec3(_pShadingSphere, "material.diffuse", vec3(1.0f,0.84f,0.0f));
+    graphics::ShaderManager::setVec3(_pShadingSphere, "material.specular", vec3(1.0f,0.84f,0.0f));
+    graphics::ShaderManager::setFloat(_pShadingSphere, "material.shininess", 125.0f);
 
     //source light params
-    engine::LShaderManager::setVec3(_pShadingSphere, "dirLight.ambient", vec3(0.0f,0.0f,0.0f));
-    engine::LShaderManager::setVec3(_pShadingSphere, "dirLight.diffuse", vec3(0.8f,0.8f,0.8f));
-    engine::LShaderManager::setVec3(_pShadingSphere, "dirLight.specular", vec3(0.2f,0.2f,0.2f));
+    graphics::ShaderManager::setVec3(_pShadingSphere, "dirLight.ambient", vec3(0.0f,0.0f,0.0f));
+    graphics::ShaderManager::setVec3(_pShadingSphere, "dirLight.diffuse", vec3(0.8f,0.8f,0.8f));
+    graphics::ShaderManager::setVec3(_pShadingSphere, "dirLight.specular", vec3(0.2f,0.2f,0.2f));
 
     //Global light
-    engine::LShaderManager::setVec3(_pShadingSphere, "globalLightColor", vec3(1.0f,1.0f,1.0f));
+    graphics::ShaderManager::setVec3(_pShadingSphere, "globalLightColor", vec3(1.0f,1.0f,1.0f));
 
     //point light
-    engine::LShaderManager::setVec3(_pLight, "pointLight.ambient", vec3(0.0f,0.0f,0.0f));
-    engine::LShaderManager::setVec3(_pLight, "pointLight.diffuse", vec3(1.0f,1.0f,1.0f));
-    engine::LShaderManager::setVec3(_pLight, "pointLight.specular", vec3(1.0f,1.0f,1.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "pointLight.ambient", vec3(0.0f,0.0f,0.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "pointLight.diffuse", vec3(1.0f,1.0f,1.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "pointLight.specular", vec3(1.0f,1.0f,1.0f));
     vec3 posPointLight(-14.0f,12.0f,-3.0f);
-    engine::LShaderManager::setVec3(_pLight, "pointLight.position", posPointLight);
-    engine::LShaderManager::setFloat(_pShadingSphere, "pointLight.constant", 2.0f);
-    engine::LShaderManager::setFloat(_pShadingSphere, "pointLight.linear", 0.01f);
-    engine::LShaderManager::setFloat(_pShadingSphere, "pointLight.quadratic", 0.001f);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "pointLight.position", posPointLight);
+    graphics::ShaderManager::setFloat(_pShadingSphere, "pointLight.constant", 2.0f);
+    graphics::ShaderManager::setFloat(_pShadingSphere, "pointLight.linear", 0.01f);
+    graphics::ShaderManager::setFloat(_pShadingSphere, "pointLight.quadratic", 0.001f);
 
     //spot light
-    engine::LShaderManager::setVec3(_pLight, "spotLight.ambient", vec3(0.0f,0.0f,0.0f));
-    engine::LShaderManager::setVec3(_pLight, "spotLight.diffuse", vec3(1.0f,1.0f,1.0f));
-    engine::LShaderManager::setVec3(_pLight, "spotLight.specular", vec3(1.0f,1.0f,1.0f));
-    engine::LShaderManager::setVec3(_pLight, "spotLight.position", posPointLight);
-    engine::LShaderManager::setVec3(_pLight, "spotLight.direction", normalize( vec3(-6.0f, 0.0f, -4.5f) - posPointLight));
-    engine::LShaderManager::setFloat(_pShadingSphere, "spotLight.cutOff", DegreesToRadians * 20.0f);
-    engine::LShaderManager::setFloat(_pShadingSphere, "spotLight.outerCutOff", DegreesToRadians * 15.0f);
-    engine::LShaderManager::setFloat(_pShadingSphere, "spotLight.constant", 2.0f);
-    engine::LShaderManager::setFloat(_pShadingSphere, "spotLight.linear", 0.01f);
-    engine::LShaderManager::setFloat(_pShadingSphere, "spotLight.quadratic", 0.001f);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.ambient", vec3(0.0f,0.0f,0.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.diffuse", vec3(1.0f,1.0f,1.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.specular", vec3(1.0f,1.0f,1.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.position", posPointLight);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.direction", normalize( vec3(-6.0f, 0.0f, -4.5f) - posPointLight));
+    graphics::ShaderManager::setFloat(_pShadingSphere, "spotLight.cutOff", DegreesToRadians * 20.0f);
+    graphics::ShaderManager::setFloat(_pShadingSphere, "spotLight.outerCutOff", DegreesToRadians * 15.0f);
+    graphics::ShaderManager::setFloat(_pShadingSphere, "spotLight.constant", 2.0f);
+    graphics::ShaderManager::setFloat(_pShadingSphere, "spotLight.linear", 0.01f);
+    graphics::ShaderManager::setFloat(_pShadingSphere, "spotLight.quadratic", 0.001f);
 
-    engine::LShaderManager::setBool(_pLight, "isspointsource", _isspointsource);    
+    graphics::ShaderManager::setBool(ShaderMultiLighting, "isspointsource", spointsource);    
 
 
     //light direction
 
-    engine::LShaderManager::setVec3(_pShadingSphere, "dirLight.direction", vec3(-0.638813, -0.238667, 0.738211));
+    graphics::ShaderManager::setVec3(_pShadingSphere, "dirLight.direction", vec3(-0.638813, -0.238667, 0.738211));
 
-    _sphere->getVertexArray()->bind();
-    _sphere->getIndexBuffer()->bind();
+    mysphere->getVertexArray()->bind();
+    mysphere->getIndexBuffer()->bind();
 
-    glDrawElements( GL_TRIANGLES, _sphere->getIndexBuffer()->getCount(), GL_UNSIGNED_INT, 0 );
+    glDrawElements( GL_TRIANGLES, mysphere->getIndexBuffer()->getCount(), GL_UNSIGNED_INT, 0 );
 
-    if(_ismoving)
+    if(moving)
     {
-        traslationSphere();
+        FuncTraslationSphere();
     }
     
 
-    _sphere->getVertexArray()->unbind();
-    _sphere->getIndexBuffer()->unbind();
+    mysphere->getVertexArray()->unbind();
+    mysphere->getIndexBuffer()->unbind();
 
     glUseProgram( 0 );
     
 
 
     // Drawing plane
-    glUseProgram( _pLight );
+    glUseProgram( ShaderMultiLighting );
 
     glPolygonMode( GL_FRONT_AND_BACK, GL_FILL );
 
-    engine::LShaderManager::setMat4(_pLight, "u_tModel", _plane->getModelMatrix());
-    engine::LShaderManager::setMat4(_pLight, "u_tView", _viewMatrix);
-    engine::LShaderManager::setMat4(_pLight, "u_tProj", _projMatrix);
+    graphics::ShaderManager::setMat4(ShaderMultiLighting, "u_tModel", myplane->getModelMatrix());
+    graphics::ShaderManager::setMat4(ShaderMultiLighting, "u_tView", MView);
+    graphics::ShaderManager::setMat4(ShaderMultiLighting, "u_tProj", MProj);
 
 
-     engine::LShaderManager::setVec3(_pLight, "viewPos", _cameraPos);
+     graphics::ShaderManager::setVec3(ShaderMultiLighting, "viewPos", cameraPosition);
     //los parametros del material
-    engine::LShaderManager::setVec3(_pLight, "material.ambient", vec3(0.2f,0.2f,0.2f));
-    engine::LShaderManager::setVec3(_pLight, "material.diffuse", vec3(0.0f,1.0f,0.0f));
-    engine::LShaderManager::setVec3(_pLight, "material.specular", vec3(0.0f,0.0f,0.0f));
-    engine::LShaderManager::setFloat(_pLight, "material.shininess", 125.0f);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "material.ambient", vec3(0.2f,0.2f,0.2f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "material.diffuse", vec3(0.0f,1.0f,0.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "material.specular", vec3(0.0f,0.0f,0.0f));
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "material.shininess", 125.0f);
 
     //los parametros de la fuente de  luz
-    engine::LShaderManager::setVec3(_pLight, "dirLight.ambient", vec3(0.0f,0.0f,0.0f));
-    engine::LShaderManager::setVec3(_pLight, "dirLight.diffuse", vec3(0.8f,0.8f,0.8f));
-    engine::LShaderManager::setVec3(_pLight, "dirLight.specular", vec3(0.2f,0.2f,0.2f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "dirLight.ambient", vec3(0.0f,0.0f,0.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "dirLight.diffuse", vec3(0.8f,0.8f,0.8f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "dirLight.specular", vec3(0.2f,0.2f,0.2f));
 
     //luz global
-    engine::LShaderManager::setVec3(_pLight, "globalLightColor", vec3(1.0f,1.0f,1.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "globalLightColor", vec3(1.0f,1.0f,1.0f));
 
     //point light
     vec3 diff_specSourceLight = vec3(1.0f,1.0f,1.0f);
-    engine::LShaderManager::setVec3(_pLight, "pointLight.ambient", vec3(0.0f,0.0f,0.0f));
-    engine::LShaderManager::setVec3(_pLight, "pointLight.diffuse", diff_specSourceLight);
-    engine::LShaderManager::setVec3(_pLight, "pointLight.specular", diff_specSourceLight);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "pointLight.ambient", vec3(0.0f,0.0f,0.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "pointLight.diffuse", diff_specSourceLight);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "pointLight.specular", diff_specSourceLight);
     posPointLight=vec3(-14.0f,12.0f,-3.0f);
 
-    engine::LShaderManager::setVec3(_pLight, "pointLight.position", posPointLight);
-    engine::LShaderManager::setFloat(_pLight, "pointLight.constant", 2.0f);
-    engine::LShaderManager::setFloat(_pLight, "pointLight.linear", 0.01f);
-    engine::LShaderManager::setFloat(_pLight, "pointLight.quadratic", 0.001f);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "pointLight.position", posPointLight);
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "pointLight.constant", 2.0f);
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "pointLight.linear", 0.01f);
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "pointLight.quadratic", 0.001f);
 
     //spot light
-    engine::LShaderManager::setVec3(_pLight, "spotLight.ambient", vec3(0.0f,0.0f,0.0f));
-    engine::LShaderManager::setVec3(_pLight, "spotLight.diffuse", diff_specSourceLight);
-    engine::LShaderManager::setVec3(_pLight, "spotLight.specular", diff_specSourceLight);
-    engine::LShaderManager::setVec3(_pLight, "spotLight.position", posPointLight);
-    engine::LShaderManager::setVec3(_pLight, "spotLight.direction", normalize( vec3(-6.0f, 0.0f, -4.5f) - posPointLight));
-    engine::LShaderManager::setFloat(_pLight, "spotLight.cutOff", DegreesToRadians * 20.0f);
-    engine::LShaderManager::setFloat(_pLight, "spotLight.outerCutOff", DegreesToRadians * 15.0f);
-    engine::LShaderManager::setFloat(_pLight, "spotLight.constant", 2.0f);
-    engine::LShaderManager::setFloat(_pLight, "spotLight.linear", 0.01f);
-    engine::LShaderManager::setFloat(_pLight, "spotLight.quadratic", 0.001f);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.ambient", vec3(0.0f,0.0f,0.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.diffuse", diff_specSourceLight);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.specular", diff_specSourceLight);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.position", posPointLight);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.direction", normalize( vec3(-6.0f, 0.0f, -4.5f) - posPointLight));
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "spotLight.cutOff", DegreesToRadians * 20.0f);
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "spotLight.outerCutOff", DegreesToRadians * 15.0f);
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "spotLight.constant", 2.0f);
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "spotLight.linear", 0.01f);
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "spotLight.quadratic", 0.001f);
 
-    engine::LShaderManager::setVec3(_pLight, "dirLight.direction", vec3(-0.638813, -0.238667, 0.738211));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "dirLight.direction", vec3(-0.638813, -0.238667, 0.738211));
 
 
 
-    _plane->getVertexArray()->bind();
-    _plane->getIndexBuffer()->bind();
+    myplane->getVertexArray()->bind();
+    myplane->getIndexBuffer()->bind();
 
     glDrawElements( GL_TRIANGLES, 
-                    _plane->getIndexBuffer()->getCount(), 
+                    myplane->getIndexBuffer()->getCount(), 
                     GL_UNSIGNED_INT, 0 );
 
-    _plane->getVertexArray()->unbind();
-    _plane->getIndexBuffer()->unbind();
+    myplane->getVertexArray()->unbind();
+    myplane->getIndexBuffer()->unbind();
 
     glUseProgram( 0 );
     
     //dibujar los ejes
-    glUseProgram( _pSimpleColor );
+    glUseProgram( ShaderSimpleColor );
 
-    engine::LShaderManager::setMat4(_pSimpleColor, "u_tModel", mat4(1.0f));
-    engine::LShaderManager::setMat4(_pSimpleColor, "u_tView", _viewMatrix);
-    engine::LShaderManager::setMat4(_pSimpleColor, "u_tProj", _projMatrix);
+    graphics::ShaderManager::setMat4(ShaderSimpleColor, "u_tModel", mat4(1.0f));
+    graphics::ShaderManager::setMat4(ShaderSimpleColor, "u_tView", MView);
+    graphics::ShaderManager::setMat4(ShaderSimpleColor, "u_tProj", MProj);
 
 
-    engine::LVertexArray* _vertexArrayAxis = new engine::LVertexArray();
-    engine::LVertexBuffer* _vertexBufferAxis = new engine::LVertexBuffer();
-    engine::LVertexBuffer* _vertexBufferColorAxis = new engine::LVertexBuffer();
-    vector<vec3> _verticesAxis;
-    vector<vec3> _verticesColorAxis;
-    _verticesAxis.push_back(vec3( 0.0f,0.0f,0.0f ) );
-    _verticesAxis.push_back(vec3( 100.0f,0.0f,0.0f ) );
-    _verticesColorAxis.push_back(vec3(1.0f,0.0f,0.0f));
-    _verticesColorAxis.push_back(vec3(1.0f,0.0f,0.0f));
+    graphics::VertexArray* VAOAxis = new graphics::VertexArray();
+    graphics::VertexBuffer* VBOAxis = new graphics::VertexBuffer();
+    graphics::VertexBuffer* VBCAxis = new graphics::VertexBuffer();
+    vector<vec3> axisVertex;
+    vector<vec3> colorVertexAxis;
+    axisVertex.push_back(vec3( 0.0f,0.0f,0.0f ) );
+    axisVertex.push_back(vec3( 100.0f,0.0f,0.0f ) );
+    colorVertexAxis.push_back(vec3(1.0f,0.0f,0.0f));
+    colorVertexAxis.push_back(vec3(1.0f,0.0f,0.0f));
 
-    _verticesAxis.push_back(vec3( 0.0f,0.0f,0.0f ) );
-    _verticesAxis.push_back(vec3( 0.0f,100.0f,0.0f ) );
-    _verticesColorAxis.push_back(vec3(1.0f,0.0f,1.0f));
-    _verticesColorAxis.push_back(vec3(1.0f,0.0f,1.0f));
+    axisVertex.push_back(vec3( 0.0f,0.0f,0.0f ) );
+    axisVertex.push_back(vec3( 0.0f,100.0f,0.0f ) );
+    colorVertexAxis.push_back(vec3(1.0f,0.0f,1.0f));
+    colorVertexAxis.push_back(vec3(1.0f,0.0f,1.0f));
 
-    _verticesAxis.push_back(vec3( 0.0f,0.0f,0.0f ) );
-    _verticesAxis.push_back(vec3( 0.0f,0.0f,100.0f ) );
-    _verticesColorAxis.push_back(vec3(0.0f,0.0f,1.0f));
-    _verticesColorAxis.push_back(vec3(0.0f,0.0f,1.0f));
+    axisVertex.push_back(vec3( 0.0f,0.0f,0.0f ) );
+    axisVertex.push_back(vec3( 0.0f,0.0f,100.0f ) );
+    colorVertexAxis.push_back(vec3(0.0f,0.0f,1.0f));
+    colorVertexAxis.push_back(vec3(0.0f,0.0f,1.0f));
 
-    _vertexBufferAxis->setData( sizeof( vec3 ) * _verticesAxis.size(),3, (GLfloat*) _verticesAxis.data() );
-    _vertexBufferColorAxis->setData( sizeof( vec3 ) * _verticesColorAxis.size(),3, (GLfloat*) _verticesColorAxis.data() );
+    VBOAxis->setData( sizeof( vec3 ) * axisVertex.size(),3, (GLfloat*) axisVertex.data() );
+    VBCAxis->setData( sizeof( vec3 ) * colorVertexAxis.size(),3, (GLfloat*) colorVertexAxis.data() );
 
-    _vertexArrayAxis->addBuffer( _vertexBufferAxis, 0 );
-    _vertexArrayAxis->addBuffer( _vertexBufferColorAxis, 2 );
+    VAOAxis->addBuffer( VBOAxis, 0 );
+    VAOAxis->addBuffer( VBCAxis, 2 );
 
-    _vertexArrayAxis->bind();
-    _vertexBufferAxis->bind();
-    _vertexBufferColorAxis->bind();
+    VAOAxis->bind();
+    VBOAxis->bind();
+    VBCAxis->bind();
 
     glDrawArrays(GL_LINES, 0, 6);
 
-    _vertexArrayAxis->unbind();
-    _vertexBufferAxis->unbind();
-    _vertexBufferColorAxis->unbind();
+    VAOAxis->unbind();
+    VBOAxis->unbind();
+    VBCAxis->unbind();
 
     glUseProgram( 0 );
 
@@ -551,13 +553,13 @@ void onIdleCallBack()
 int main( int argc, char *argv[] )
 {
 
-    _window.registerKeyCallback( onKeyCallback );
-    _window.registerMouseCallback( onMouseCallback );
-    _window.registerMotionCallback( onMotionCallBack );
-    _window.registerLoopCallback( onLoopCallBack );
-    _window.registerReshapeCallback( onReshapeCallBack );
-    _window.registerIdleCallback( onIdleCallBack );
-    _window.registerLoadCallback( onLoadCallBack );
-    _window.init();
+    mywindow.registerKeyCallback( onKeyCallback );
+    mywindow.registerMouseCallback( onMouseCallback );
+    mywindow.registerMotionCallback( onMotionCallBack );
+    mywindow.registerLoopCallback( onLoopCallBack );
+    mywindow.registerReshapeCallback( onReshapeCallBack );
+    mywindow.registerIdleCallback( onIdleCallBack );
+    mywindow.registerLoadCallback( onLoadCallBack );
+    mywindow.init();
     return 0;
 }

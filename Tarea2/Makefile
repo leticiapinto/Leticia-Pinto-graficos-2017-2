@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/leticia/Music/OPENGL
+CMAKE_SOURCE_DIR = /home/leticia/Videos/OPENGL
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/leticia/Music/OPENGL
+CMAKE_BINARY_DIR = /home/leticia/Videos/OPENGL
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leticia/Music/OPENGL/CMakeFiles /home/leticia/Music/OPENGL/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leticia/Videos/OPENGL/CMakeFiles /home/leticia/Videos/OPENGL/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leticia/Music/OPENGL/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leticia/Videos/OPENGL/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

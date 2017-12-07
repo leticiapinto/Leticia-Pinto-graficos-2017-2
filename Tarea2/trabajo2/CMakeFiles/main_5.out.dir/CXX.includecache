@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/leticia/Music/OPENGL/Common.h
+/home/leticia/Videos/OPENGL/Common.h
 
-/home/leticia/Music/OPENGL/Config.h
+/home/leticia/Videos/OPENGL/Config.h
 
-/home/leticia/Music/OPENGL/trabajo2/Angel-yjc.h
+/home/leticia/Videos/OPENGL/trabajo2/Angel-yjc.h
 cmath
 -
 iostream
@@ -24,13 +24,13 @@ GL/glew.h
 GL/glut.h
 -
 vec.h
-/home/leticia/Music/OPENGL/trabajo2/vec.h
+/home/leticia/Videos/OPENGL/trabajo2/vec.h
 mat-yjc-new.h
-/home/leticia/Music/OPENGL/trabajo2/mat-yjc-new.h
+/home/leticia/Videos/OPENGL/trabajo2/mat-yjc-new.h
 CheckError.h
-/home/leticia/Music/OPENGL/trabajo2/CheckError.h
+/home/leticia/Videos/OPENGL/trabajo2/CheckError.h
 
-/home/leticia/Music/OPENGL/trabajo2/CheckError.h
+/home/leticia/Videos/OPENGL/trabajo2/CheckError.h
 stdio.h
 -
 GLUT/glut.h
@@ -38,7 +38,7 @@ GLUT/glut.h
 GL/gl.h
 -
 
-/home/leticia/Music/OPENGL/trabajo2/LCommon.h
+/home/leticia/Videos/OPENGL/trabajo2/Common.h
 GL/glew.h
 -
 iostream
@@ -46,7 +46,7 @@ iostream
 vector
 -
 Angel-yjc.h
-/home/leticia/Music/OPENGL/trabajo2/Angel-yjc.h
+/home/leticia/Videos/OPENGL/trabajo2/Angel-yjc.h
 glm/glm.hpp
 -
 glm/gtc/matrix_transform.hpp
@@ -56,37 +56,37 @@ glm/gtx/transform.hpp
 glm/gtc/type_ptr.hpp
 -
 
-/home/leticia/Music/OPENGL/trabajo2/LIndexBuffer.cpp
-LIndexBuffer.h
-/home/leticia/Music/OPENGL/trabajo2/LIndexBuffer.h
+/home/leticia/Videos/OPENGL/trabajo2/IndexBuffer.cpp
+IndexBuffer.h
+/home/leticia/Videos/OPENGL/trabajo2/IndexBuffer.h
 
-/home/leticia/Music/OPENGL/trabajo2/LIndexBuffer.h
+/home/leticia/Videos/OPENGL/trabajo2/IndexBuffer.h
 GL/glew.h
 -
 
-/home/leticia/Music/OPENGL/trabajo2/LMesh.cpp
-LMesh.h
-/home/leticia/Music/OPENGL/trabajo2/LMesh.h
+/home/leticia/Videos/OPENGL/trabajo2/Mesh.cpp
+Mesh.h
+/home/leticia/Videos/OPENGL/trabajo2/Mesh.h
 
-/home/leticia/Music/OPENGL/trabajo2/LMesh.h
-LCommon.h
-/home/leticia/Music/OPENGL/trabajo2/LCommon.h
-LVertexBuffer.h
-/home/leticia/Music/OPENGL/trabajo2/LVertexBuffer.h
-LVertexArray.h
-/home/leticia/Music/OPENGL/trabajo2/LVertexArray.h
-LIndexBuffer.h
-/home/leticia/Music/OPENGL/trabajo2/LIndexBuffer.h
+/home/leticia/Videos/OPENGL/trabajo2/Mesh.h
+Common.h
+/home/leticia/Videos/OPENGL/trabajo2/Common.h
+VertexBuffer.h
+/home/leticia/Videos/OPENGL/trabajo2/VertexBuffer.h
+VertexArray.h
+/home/leticia/Videos/OPENGL/trabajo2/VertexArray.h
+IndexBuffer.h
+/home/leticia/Videos/OPENGL/trabajo2/IndexBuffer.h
 
-/home/leticia/Music/OPENGL/trabajo2/LMeshBuilder.cpp
-LMeshBuilder.h
-/home/leticia/Music/OPENGL/trabajo2/LMeshBuilder.h
+/home/leticia/Videos/OPENGL/trabajo2/MeshBuilder.cpp
+MeshBuilder.h
+/home/leticia/Videos/OPENGL/trabajo2/MeshBuilder.h
 
-/home/leticia/Music/OPENGL/trabajo2/LMeshBuilder.h
-LCommon.h
-/home/leticia/Music/OPENGL/trabajo2/LCommon.h
-LMesh.h
-/home/leticia/Music/OPENGL/trabajo2/LMesh.h
+/home/leticia/Videos/OPENGL/trabajo2/MeshBuilder.h
+Common.h
+/home/leticia/Videos/OPENGL/trabajo2/Common.h
+Mesh.h
+/home/leticia/Videos/OPENGL/trabajo2/Mesh.h
 fstream
 -
 string
@@ -94,13 +94,13 @@ string
 vector
 -
 
-/home/leticia/Music/OPENGL/trabajo2/LShaderManager.cpp
-LShaderManager.h
-/home/leticia/Music/OPENGL/trabajo2/LShaderManager.h
+/home/leticia/Videos/OPENGL/trabajo2/ShaderManager.cpp
+ShaderManager.h
+/home/leticia/Videos/OPENGL/trabajo2/ShaderManager.h
 
-/home/leticia/Music/OPENGL/trabajo2/LShaderManager.h
+/home/leticia/Videos/OPENGL/trabajo2/ShaderManager.h
 ../Common.h
-/home/leticia/Music/OPENGL/Common.h
+/home/leticia/Videos/OPENGL/Common.h
 GL/glew.h
 -
 iostream
@@ -114,73 +114,73 @@ sstream
 map
 -
 Angel-yjc.h
-/home/leticia/Music/OPENGL/trabajo2/Angel-yjc.h
+/home/leticia/Videos/OPENGL/trabajo2/Angel-yjc.h
 
-/home/leticia/Music/OPENGL/trabajo2/LVertexArray.cpp
-LVertexArray.h
-/home/leticia/Music/OPENGL/trabajo2/LVertexArray.h
+/home/leticia/Videos/OPENGL/trabajo2/VertexArray.cpp
+VertexArray.h
+/home/leticia/Videos/OPENGL/trabajo2/VertexArray.h
 
-/home/leticia/Music/OPENGL/trabajo2/LVertexArray.h
+/home/leticia/Videos/OPENGL/trabajo2/VertexArray.h
 GL/glew.h
 -
 vector
 -
-LVertexBuffer.h
-/home/leticia/Music/OPENGL/trabajo2/LVertexBuffer.h
+VertexBuffer.h
+/home/leticia/Videos/OPENGL/trabajo2/VertexBuffer.h
 
-/home/leticia/Music/OPENGL/trabajo2/LVertexBuffer.cpp
-LVertexBuffer.h
-/home/leticia/Music/OPENGL/trabajo2/LVertexBuffer.h
+/home/leticia/Videos/OPENGL/trabajo2/VertexBuffer.cpp
+VertexBuffer.h
+/home/leticia/Videos/OPENGL/trabajo2/VertexBuffer.h
 
-/home/leticia/Music/OPENGL/trabajo2/LVertexBuffer.h
+/home/leticia/Videos/OPENGL/trabajo2/VertexBuffer.h
 GL/glew.h
 -
 
-/home/leticia/Music/OPENGL/trabajo2/LWindow.cpp
-LWindow.h
-/home/leticia/Music/OPENGL/trabajo2/LWindow.h
+/home/leticia/Videos/OPENGL/trabajo2/Window.cpp
+Window.h
+/home/leticia/Videos/OPENGL/trabajo2/Window.h
 iostream
 -
 
-/home/leticia/Music/OPENGL/trabajo2/LWindow.h
+/home/leticia/Videos/OPENGL/trabajo2/Window.h
 ../Config.h
-/home/leticia/Music/OPENGL/Config.h
+/home/leticia/Videos/OPENGL/Config.h
 ../Common.h
-/home/leticia/Music/OPENGL/Common.h
+/home/leticia/Videos/OPENGL/Common.h
 GL/glew.h
 -
 GL/glut.h
 -
 
-/home/leticia/Music/OPENGL/trabajo2/main_5.cpp
-LWindow.h
-/home/leticia/Music/OPENGL/trabajo2/LWindow.h
-LShaderManager.h
-/home/leticia/Music/OPENGL/trabajo2/LShaderManager.h
-LVertexArray.h
-/home/leticia/Music/OPENGL/trabajo2/LVertexArray.h
-LVertexBuffer.h
-/home/leticia/Music/OPENGL/trabajo2/LVertexBuffer.h
-LIndexBuffer.h
-/home/leticia/Music/OPENGL/trabajo2/LIndexBuffer.h
-LMeshBuilder.h
-/home/leticia/Music/OPENGL/trabajo2/LMeshBuilder.h
-LMesh.h
-/home/leticia/Music/OPENGL/trabajo2/LMesh.h
+/home/leticia/Videos/OPENGL/trabajo2/main_5.cpp
+Window.h
+/home/leticia/Videos/OPENGL/trabajo2/Window.h
+ShaderManager.h
+/home/leticia/Videos/OPENGL/trabajo2/ShaderManager.h
+VertexArray.h
+/home/leticia/Videos/OPENGL/trabajo2/VertexArray.h
+VertexBuffer.h
+/home/leticia/Videos/OPENGL/trabajo2/VertexBuffer.h
+IndexBuffer.h
+/home/leticia/Videos/OPENGL/trabajo2/IndexBuffer.h
+MeshBuilder.h
+/home/leticia/Videos/OPENGL/trabajo2/MeshBuilder.h
+Mesh.h
+/home/leticia/Videos/OPENGL/trabajo2/Mesh.h
 iostream
 -
 
-/home/leticia/Music/OPENGL/trabajo2/mat-yjc-new.h
+/home/leticia/Videos/OPENGL/trabajo2/mat-yjc-new.h
 vec.h
-/home/leticia/Music/OPENGL/trabajo2/vec.h
+/home/leticia/Videos/OPENGL/trabajo2/vec.h
 stdio.h
 -
 math.h
 -
 
-/home/leticia/Music/OPENGL/trabajo2/vec.h
+/home/leticia/Videos/OPENGL/trabajo2/vec.h
 Angel-yjc.h
-/home/leticia/Music/OPENGL/trabajo2/Angel-yjc.h
+/home/leticia/Videos/OPENGL/trabajo2/Angel-yjc.h
 
 /usr/local/include/glm/common.hpp
 detail/func_common.hpp
