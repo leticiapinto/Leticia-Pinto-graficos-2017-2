@@ -1,0 +1,5 @@
+/home/leticia/Music/OPENGL/CMakeFiles/edit_cache.dir
+/home/leticia/Music/OPENGL/CMakeFiles/rebuild_cache.dir
+/home/leticia/Music/OPENGL/trabajo2/CMakeFiles/edit_cache.dir
+/home/leticia/Music/OPENGL/trabajo2/CMakeFiles/rebuild_cache.dir
+/home/leticia/Music/OPENGL/trabajo2/CMakeFiles/main_5.out.dir

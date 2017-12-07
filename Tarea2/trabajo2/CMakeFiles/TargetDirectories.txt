@@ -1,0 +1,3 @@
+/media/leticia/DATOS/OPENGL/trabajo2/CMakeFiles/edit_cache.dir
+/media/leticia/DATOS/OPENGL/trabajo2/CMakeFiles/rebuild_cache.dir
+/media/leticia/DATOS/OPENGL/trabajo2/CMakeFiles/main_5.out.dir
