@@ -465,13 +465,13 @@ void onLoadCallBack()
     */
 
     vector<vec2> myvertexTexture;
-    float unitImg=1.0f/6.0f;//image is 6*6
-    float checkUnitW = 12;
-    float checkUnitH = 10;
-    myvertexTexture.push_back(vec2( checkUnitW * unitImg , checkUnitW * unitImg ) );
-    myvertexTexture.push_back(vec2( checkUnitW * unitImg, 0.0f ) );
-    myvertexTexture.push_back(vec2( (checkUnitW - checkUnitH) * unitImg, 0.0f ) );
-    myvertexTexture.push_back(vec2( (checkUnitW - checkUnitH) * unitImg, checkUnitW * unitImg ) );
+    float unitbyImage=1.0f/8.0f;//image is 6*6
+    float checkUnitWidth = 12;
+    float checkUnitHeight = 10;
+    myvertexTexture.push_back(vec2( checkUnitWidth * unitbyImage , checkUnitWidth * unitbyImage ) );
+    myvertexTexture.push_back(vec2( checkUnitWidth * unitbyImage, 0.0f ) );
+    myvertexTexture.push_back(vec2( (checkUnitWidth - checkUnitHeight) * unitbyImage, 0.0f ) );
+    myvertexTexture.push_back(vec2( (checkUnitWidth - checkUnitHeight) * unitbyImage, checkUnitWidth * unitbyImage ) );
     
 
     //load textures before creating myplane
