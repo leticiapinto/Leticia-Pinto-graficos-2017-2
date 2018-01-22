@@ -1,0 +1,5 @@
+/media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles/edit_cache.dir
+/media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles/rebuild_cache.dir
+/media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/CMakeFiles/edit_cache.dir
+/media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/CMakeFiles/rebuild_cache.dir
+/media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/CMakeFiles/main_5.out.dir

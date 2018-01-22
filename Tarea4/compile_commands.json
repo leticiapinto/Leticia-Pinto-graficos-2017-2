@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/home/leticia/Music/OPENGL/trabajo2",
+  "command": "/usr/bin/c++    -I/usr/local/include  -g   -std=gnu++11 -o CMakeFiles/main_5.out.dir/main_5.cpp.o -c /home/leticia/Music/OPENGL/trabajo2/main_5.cpp",
+  "file": "/home/leticia/Music/OPENGL/trabajo2/main_5.cpp"
+},
+{
+  "directory": "/home/leticia/Music/OPENGL/trabajo2",
+  "command": "/usr/bin/c++    -I/usr/local/include  -g   -std=gnu++11 -o CMakeFiles/main_5.out.dir/LWindow.cpp.o -c /home/leticia/Music/OPENGL/trabajo2/LWindow.cpp",
+  "file": "/home/leticia/Music/OPENGL/trabajo2/LWindow.cpp"
+},
+{
+  "directory": "/home/leticia/Music/OPENGL/trabajo2",
+  "command": "/usr/bin/c++    -I/usr/local/include  -g   -std=gnu++11 -o CMakeFiles/main_5.out.dir/LShaderManager.cpp.o -c /home/leticia/Music/OPENGL/trabajo2/LShaderManager.cpp",
+  "file": "/home/leticia/Music/OPENGL/trabajo2/LShaderManager.cpp"
+},
+{
+  "directory": "/home/leticia/Music/OPENGL/trabajo2",
+  "command": "/usr/bin/c++    -I/usr/local/include  -g   -std=gnu++11 -o CMakeFiles/main_5.out.dir/LVertexBuffer.cpp.o -c /home/leticia/Music/OPENGL/trabajo2/LVertexBuffer.cpp",
+  "file": "/home/leticia/Music/OPENGL/trabajo2/LVertexBuffer.cpp"
+},
+{
+  "directory": "/home/leticia/Music/OPENGL/trabajo2",
+  "command": "/usr/bin/c++    -I/usr/local/include  -g   -std=gnu++11 -o CMakeFiles/main_5.out.dir/LIndexBuffer.cpp.o -c /home/leticia/Music/OPENGL/trabajo2/LIndexBuffer.cpp",
+  "file": "/home/leticia/Music/OPENGL/trabajo2/LIndexBuffer.cpp"
+},
+{
+  "directory": "/home/leticia/Music/OPENGL/trabajo2",
+  "command": "/usr/bin/c++    -I/usr/local/include  -g   -std=gnu++11 -o CMakeFiles/main_5.out.dir/LVertexArray.cpp.o -c /home/leticia/Music/OPENGL/trabajo2/LVertexArray.cpp",
+  "file": "/home/leticia/Music/OPENGL/trabajo2/LVertexArray.cpp"
+},
+{
+  "directory": "/home/leticia/Music/OPENGL/trabajo2",
+  "command": "/usr/bin/c++    -I/usr/local/include  -g   -std=gnu++11 -o CMakeFiles/main_5.out.dir/LMesh.cpp.o -c /home/leticia/Music/OPENGL/trabajo2/LMesh.cpp",
+  "file": "/home/leticia/Music/OPENGL/trabajo2/LMesh.cpp"
+},
+{
+  "directory": "/home/leticia/Music/OPENGL/trabajo2",
+  "command": "/usr/bin/c++    -I/usr/local/include  -g   -std=gnu++11 -o CMakeFiles/main_5.out.dir/LMeshBuilder.cpp.o -c /home/leticia/Music/OPENGL/trabajo2/LMeshBuilder.cpp",
+  "file": "/home/leticia/Music/OPENGL/trabajo2/LMeshBuilder.cpp"
+}
+]

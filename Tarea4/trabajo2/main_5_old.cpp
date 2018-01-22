@@ -1,0 +1,565 @@
+#include "Window.h"
+#include "ShaderManager.h"
+#include "VertexArray.h"
+#include "VertexBuffer.h"
+#include "IndexBuffer.h"
+
+#include "MeshBuilder.h"
+#include "Mesh.h"
+
+#include <iostream>
+
+using namespace std;
+
+bool wireframe_status = false;
+graphics::Window mywindow;
+graphics::Mesh* mysphere;
+
+
+float traslation_speed=0.08f;
+float sphere_angle=0.0f;
+int position_route=0;
+float radius_sphere=1.0f;
+
+
+vec3 APoint(3.0f, 1.0f, 5.0f);
+vec3 BPoint(-1.0f, 1.0f, -4.0f);
+vec3 CPoint(3.5f, 1.0f, -2.5f);
+
+vec3 DistanceAB(BPoint-APoint);
+vec3 DistanceBC(CPoint-BPoint);
+vec3 DistanceCA(APoint-CPoint);
+
+GLuint ShaderSimpleColor, ShaderMultiLighting;
+
+
+mat4 MView(1.0f);
+mat4 MProj(1.0f);
+graphics::Mesh* myplane;
+
+vec3 cameraPosition;
+vec3 cameraDirection;
+vec3 cameraTarget;
+vec3 VRUP( 0.0f, 1.0f, 0.0f );
+
+float xposCamera=7.0f, yposCamera=3.0f, zposCamera=-10.0f;
+
+static int menu_id, m_enable_lighting_id, m_shading_id, m_lighting_id, m_wireframe_id, m_lightsource_id;
+
+
+//options
+GLuint _pShadingSphere;
+
+//variables del menu
+bool _is_b_activated=false;
+bool moving=false;
+bool lighting = false;
+bool smoothing = false;
+bool wireframe = false;
+bool spointsource = false;
+
+
+void MenuELighting(int option)
+{
+	if (option == 0)
+	{
+		lighting = false;
+	}
+	else if (option == 1)
+	{
+		lighting = true;
+	}
+	glutPostRedisplay();
+}
+
+void MenuTypeShading(int option)
+{
+
+	if (option == 0)//flat
+	{
+		smoothing = false;
+	}
+	else if (option == 1)//smooth
+	{
+		smoothing = true;
+	}
+
+	mysphere->ReCalcNormal(smoothing);
+	glutPostRedisplay();
+}
+
+void MenuLighting(int option)
+{
+
+
+	glutPostRedisplay();
+}
+
+
+void MainMenu(int option)
+{
+    if(option == 0)
+    {
+        xposCamera = 7.0f; yposCamera = 3.0f; zposCamera = -10.0f;
+    }
+    else if(option == 1)
+    {
+        exit(0);
+    }
+    glutPostRedisplay();
+}
+
+
+
+void MenuEWireFrame(int option)
+{
+    if(option == 0)
+    {
+        cout << "wireframe" << endl;
+        wireframe = false;
+        
+    }
+    else if( option == 1)
+    {
+        wireframe = true;
+        cout << "fill" << endl;
+    }
+    glutPostRedisplay();
+}
+
+void MenuLightSource(int option)
+{
+    if(option == 0)
+    {
+        cout << "spot light" << endl;
+        spointsource = false;
+        
+    }
+    else if( option == 1)
+    {
+        spointsource = true;
+        cout << "point source" << endl;
+    }
+    glutPostRedisplay();
+}
+
+void BuildMenu(void){ 
+
+
+    //sub menu
+    m_enable_lighting_id = glutCreateMenu(MenuELighting);
+
+    glutAddMenuEntry("No", 0);
+    glutAddMenuEntry("Yes", 1);
+
+    //sub menu
+    m_shading_id = glutCreateMenu(MenuTypeShading);
+    
+    glutAddMenuEntry("Flat shading", 0);
+    glutAddMenuEntry("Smooth shading", 1);
+
+    //sub menu
+    m_lighting_id = glutCreateMenu(MenuLighting);
+
+    glutAddMenuEntry("No", 0);
+    glutAddMenuEntry("Yes", 1);
+
+    //sub menu
+    m_wireframe_id = glutCreateMenu(MenuEWireFrame);
+    
+    glutAddMenuEntry("No", 0);
+    glutAddMenuEntry("yes", 1);
+
+    //submenu
+    m_lightsource_id = glutCreateMenu(MenuLightSource);
+    
+    glutAddMenuEntry("Spot Light",0);
+    glutAddMenuEntry("Point Source",1);
+
+    //creating menu
+    menu_id = glutCreateMenu(MainMenu);
+    glutAddMenuEntry("Default Wiew Point", 0);
+    glutAddSubMenu("Enable Lighting", m_enable_lighting_id);
+    glutAddSubMenu("Shading", m_shading_id);
+    glutAddSubMenu("Lighting", m_lighting_id);
+    glutAddSubMenu("Wire Frame", m_wireframe_id);
+    glutAddSubMenu("Light Source", m_lightsource_id);
+    glutAddMenuEntry("Quit", 1);
+
+    glutAttachMenu(GLUT_LEFT_BUTTON);
+
+} 
+
+
+void FuncTraslationSphere()
+{
+    vec3 distance,from ,to;
+    if(position_route==0)
+    {
+        from=APoint;
+        to=BPoint;
+        distance=DistanceAB;
+    }
+    else if(position_route==1)
+    {
+        from=BPoint;
+        to=CPoint;
+        distance=DistanceBC;
+    }
+    else if(position_route==2)
+    {
+        from=CPoint;
+        to=APoint;
+        distance=DistanceCA;
+    }
+    
+    
+
+    vec3 dt =  normal(distance)*traslation_speed;
+    mysphere->pos = mysphere->pos + dt;
+
+    sphere_angle = (traslation_speed*length(distance)*4/(radius_sphere));
+    vec3 axisRotation = cross(vec3(0.0f,1.0f,0.0f), normal(distance));
+    normalize(axisRotation);
+
+    mat4 matrixRotation = Rotate(sphere_angle, axisRotation.x, axisRotation.y, axisRotation.z);
+    mysphere->myrotationMatrix = matrixRotation * mysphere->myrotationMatrix;
+
+    if(length(mysphere->pos-from)>=length(distance))
+    {
+        position_route++;
+        if(position_route>=3)
+        {
+            position_route=0;
+        }
+    }
+}
+
+void onKeyCallback( unsigned char key, int x, int y )
+{
+
+    switch (key)
+   { 
+        case 'b':   
+            _is_b_activated = true;
+            break;
+        case 'B':
+            _is_b_activated = true;
+            break;
+        case 'x':  
+            xposCamera--;
+            break;
+        case 'X':
+            xposCamera++;
+            break;
+        case 'y':
+            yposCamera--;
+            break; 
+        case 'Y':
+            yposCamera++;
+            break;
+        case 'z':
+            zposCamera--;
+            break; 
+        case 'Z':
+            zposCamera++;
+            break;            
+        default:
+            break;
+    }
+}
+
+void onMouseCallback( int button, int position_route, int x, int y )
+{
+    if(_is_b_activated)
+    if (button == GLUT_RIGHT_BUTTON) {
+        if (position_route == GLUT_DOWN) {
+            moving = !moving;
+        }
+    }
+}
+
+void onMotionCallBack(int x, int y)
+{
+
+}
+
+void onLoadCallBack()
+{
+
+
+    BuildMenu();
+
+    graphics::ShaderManager::create();
+    ShaderSimpleColor = graphics::ShaderManager::INSTANCE->programs["color"];
+
+    //sphere
+    ShaderMultiLighting = graphics::ShaderManager::INSTANCE->programs["multilighting"];
+    
+
+    mysphere = graphics::MeshBuilder::createFromFile( "../res/models/model_sphere_1024.obj", vec3(1.0f, 0.84f, 0.0f) );
+
+
+    std::vector <vec3> myvertexplane;
+    myvertexplane.push_back(vec3( 5.0f,0.0f,8.0f ) );
+    myvertexplane.push_back(vec3( 5.0f,0.0f,-4.0f ) );
+    myvertexplane.push_back(vec3( -5.0f,0.0f,-4.0f ) );
+    myvertexplane.push_back(vec3( -5.0f,0.0f,8.0f ) ); 
+
+    std::vector <vec3> mycolorPlane;
+    vec3 vertexColorPlane = vec3( 0.0f,1.0f,0.0f );
+    mycolorPlane.push_back(vertexColorPlane);
+    mycolorPlane.push_back(vertexColorPlane);
+    mycolorPlane.push_back(vertexColorPlane);
+    mycolorPlane.push_back(vertexColorPlane);
+
+    myplane = graphics::MeshBuilder::createPlane(  myvertexplane , mycolorPlane );
+
+    mysphere->pos = vec3( 3.0f, 1.0f, 5.0f );
+
+    
+
+}
+
+void onLoopCallBack()
+{
+    //****camera control
+    cameraPosition=vec3( xposCamera, yposCamera, zposCamera );
+    cameraDirection=vec3( -7.0f, -3.0f, 10.0f );
+    cameraTarget = cameraPosition + cameraDirection;
+
+    MView = LookAt(  cameraPosition, cameraTarget,VRUP );
+    MProj = Perspective(  45.0f , (GLfloat) mywindow.width() / mywindow.height(),  0.5f, 100.0f );
+    
+    //*******************
+
+    //sphere
+    
+    if(lighting)
+    {
+        _pShadingSphere = ShaderMultiLighting;
+    }
+    else
+    {
+        _pShadingSphere= ShaderSimpleColor;
+    }
+
+
+    if(wireframe)
+    {
+        glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
+    }
+    else
+    {
+        glPolygonMode( GL_FRONT_AND_BACK, GL_FILL );
+    }
+
+    
+    glUseProgram( _pShadingSphere);
+    graphics::ShaderManager::setMat4(_pShadingSphere, "u_tModel", mysphere->getModelMatrix());
+    graphics::ShaderManager::setMat4(_pShadingSphere, "u_tView", MView);
+    graphics::ShaderManager::setMat4(_pShadingSphere, "u_tProj", MProj);
+
+
+    graphics::ShaderManager::setVec3(_pShadingSphere, "viewPos", cameraPosition);
+    //material params
+    graphics::ShaderManager::setVec3(_pShadingSphere, "material.ambient", vec3(0.2f,0.2f,0.2f));
+    graphics::ShaderManager::setVec3(_pShadingSphere, "material.diffuse", vec3(1.0f,0.84f,0.0f));
+    graphics::ShaderManager::setVec3(_pShadingSphere, "material.specular", vec3(1.0f,0.84f,0.0f));
+    graphics::ShaderManager::setFloat(_pShadingSphere, "material.shininess", 125.0f);
+
+    //source light params
+    graphics::ShaderManager::setVec3(_pShadingSphere, "dirLight.ambient", vec3(0.0f,0.0f,0.0f));
+    graphics::ShaderManager::setVec3(_pShadingSphere, "dirLight.diffuse", vec3(0.8f,0.8f,0.8f));
+    graphics::ShaderManager::setVec3(_pShadingSphere, "dirLight.specular", vec3(0.2f,0.2f,0.2f));
+
+    //Global light
+    graphics::ShaderManager::setVec3(_pShadingSphere, "globalLightColor", vec3(1.0f,1.0f,1.0f));
+
+    //point light
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "pointLight.ambient", vec3(0.0f,0.0f,0.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "pointLight.diffuse", vec3(1.0f,1.0f,1.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "pointLight.specular", vec3(1.0f,1.0f,1.0f));
+    vec3 posPointLight(-14.0f,12.0f,-3.0f);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "pointLight.position", posPointLight);
+    graphics::ShaderManager::setFloat(_pShadingSphere, "pointLight.constant", 2.0f);
+    graphics::ShaderManager::setFloat(_pShadingSphere, "pointLight.linear", 0.01f);
+    graphics::ShaderManager::setFloat(_pShadingSphere, "pointLight.quadratic", 0.001f);
+
+    //spot light
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.ambient", vec3(0.0f,0.0f,0.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.diffuse", vec3(1.0f,1.0f,1.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.specular", vec3(1.0f,1.0f,1.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.position", posPointLight);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.direction", normalize( vec3(-6.0f, 0.0f, -4.5f) - posPointLight));
+    graphics::ShaderManager::setFloat(_pShadingSphere, "spotLight.cutOff", DegreesToRadians * 20.0f);
+    graphics::ShaderManager::setFloat(_pShadingSphere, "spotLight.outerCutOff", DegreesToRadians * 15.0f);
+    graphics::ShaderManager::setFloat(_pShadingSphere, "spotLight.constant", 2.0f);
+    graphics::ShaderManager::setFloat(_pShadingSphere, "spotLight.linear", 0.01f);
+    graphics::ShaderManager::setFloat(_pShadingSphere, "spotLight.quadratic", 0.001f);
+
+    graphics::ShaderManager::setBool(ShaderMultiLighting, "isspointsource", spointsource);    
+
+
+    //light direction
+
+    graphics::ShaderManager::setVec3(_pShadingSphere, "dirLight.direction", vec3(-0.638813, -0.238667, 0.738211));
+
+    mysphere->getVertexArray()->bind();
+    mysphere->getIndexBuffer()->bind();
+
+    glDrawElements( GL_TRIANGLES, mysphere->getIndexBuffer()->getCount(), GL_UNSIGNED_INT, 0 );
+
+    if(moving)
+    {
+        FuncTraslationSphere();
+    }
+    
+
+    mysphere->getVertexArray()->unbind();
+    mysphere->getIndexBuffer()->unbind();
+
+    glUseProgram( 0 );
+    
+
+
+    // Drawing plane
+    glUseProgram( ShaderMultiLighting );
+
+    glPolygonMode( GL_FRONT_AND_BACK, GL_FILL );
+
+    graphics::ShaderManager::setMat4(ShaderMultiLighting, "u_tModel", myplane->getModelMatrix());
+    graphics::ShaderManager::setMat4(ShaderMultiLighting, "u_tView", MView);
+    graphics::ShaderManager::setMat4(ShaderMultiLighting, "u_tProj", MProj);
+
+
+     graphics::ShaderManager::setVec3(ShaderMultiLighting, "viewPos", cameraPosition);
+    //los parametros del material
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "material.ambient", vec3(0.2f,0.2f,0.2f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "material.diffuse", vec3(0.0f,1.0f,0.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "material.specular", vec3(0.0f,0.0f,0.0f));
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "material.shininess", 125.0f);
+
+    //los parametros de la fuente de  luz
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "dirLight.ambient", vec3(0.0f,0.0f,0.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "dirLight.diffuse", vec3(0.8f,0.8f,0.8f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "dirLight.specular", vec3(0.2f,0.2f,0.2f));
+
+    //luz global
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "globalLightColor", vec3(1.0f,1.0f,1.0f));
+
+    //point light
+    vec3 diff_specSourceLight = vec3(1.0f,1.0f,1.0f);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "pointLight.ambient", vec3(0.0f,0.0f,0.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "pointLight.diffuse", diff_specSourceLight);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "pointLight.specular", diff_specSourceLight);
+    posPointLight=vec3(-14.0f,12.0f,-3.0f);
+
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "pointLight.position", posPointLight);
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "pointLight.constant", 2.0f);
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "pointLight.linear", 0.01f);
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "pointLight.quadratic", 0.001f);
+
+    //spot light
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.ambient", vec3(0.0f,0.0f,0.0f));
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.diffuse", diff_specSourceLight);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.specular", diff_specSourceLight);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.position", posPointLight);
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "spotLight.direction", normalize( vec3(-6.0f, 0.0f, -4.5f) - posPointLight));
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "spotLight.cutOff", DegreesToRadians * 20.0f);
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "spotLight.outerCutOff", DegreesToRadians * 15.0f);
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "spotLight.constant", 2.0f);
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "spotLight.linear", 0.01f);
+    graphics::ShaderManager::setFloat(ShaderMultiLighting, "spotLight.quadratic", 0.001f);
+
+    graphics::ShaderManager::setVec3(ShaderMultiLighting, "dirLight.direction", vec3(-0.638813, -0.238667, 0.738211));
+
+
+
+    myplane->getVertexArray()->bind();
+    myplane->getIndexBuffer()->bind();
+
+    glDrawElements( GL_TRIANGLES, 
+                    myplane->getIndexBuffer()->getCount(), 
+                    GL_UNSIGNED_INT, 0 );
+
+    myplane->getVertexArray()->unbind();
+    myplane->getIndexBuffer()->unbind();
+
+    glUseProgram( 0 );
+    
+    //dibujar los ejes
+    glUseProgram( ShaderSimpleColor );
+
+    graphics::ShaderManager::setMat4(ShaderSimpleColor, "u_tModel", mat4(1.0f));
+    graphics::ShaderManager::setMat4(ShaderSimpleColor, "u_tView", MView);
+    graphics::ShaderManager::setMat4(ShaderSimpleColor, "u_tProj", MProj);
+
+
+    graphics::VertexArray* VAOAxis = new graphics::VertexArray();
+    graphics::VertexBuffer* VBOAxis = new graphics::VertexBuffer();
+    graphics::VertexBuffer* VBCAxis = new graphics::VertexBuffer();
+    vector<vec3> axisVertex;
+    vector<vec3> colorVertexAxis;
+    axisVertex.push_back(vec3( 0.0f,0.0f,0.0f ) );
+    axisVertex.push_back(vec3( 100.0f,0.0f,0.0f ) );
+    colorVertexAxis.push_back(vec3(1.0f,0.0f,0.0f));
+    colorVertexAxis.push_back(vec3(1.0f,0.0f,0.0f));
+
+    axisVertex.push_back(vec3( 0.0f,0.0f,0.0f ) );
+    axisVertex.push_back(vec3( 0.0f,100.0f,0.0f ) );
+    colorVertexAxis.push_back(vec3(1.0f,0.0f,1.0f));
+    colorVertexAxis.push_back(vec3(1.0f,0.0f,1.0f));
+
+    axisVertex.push_back(vec3( 0.0f,0.0f,0.0f ) );
+    axisVertex.push_back(vec3( 0.0f,0.0f,100.0f ) );
+    colorVertexAxis.push_back(vec3(0.0f,0.0f,1.0f));
+    colorVertexAxis.push_back(vec3(0.0f,0.0f,1.0f));
+
+    VBOAxis->setData( sizeof( vec3 ) * axisVertex.size(),3, (GLfloat*) axisVertex.data() );
+    VBCAxis->setData( sizeof( vec3 ) * colorVertexAxis.size(),3, (GLfloat*) colorVertexAxis.data() );
+
+    VAOAxis->addBuffer( VBOAxis, 0 );
+    VAOAxis->addBuffer( VBCAxis, 2 );
+
+    VAOAxis->bind();
+    VBOAxis->bind();
+    VBCAxis->bind();
+
+    glDrawArrays(GL_LINES, 0, 6);
+
+    VAOAxis->unbind();
+    VBOAxis->unbind();
+    VBCAxis->unbind();
+
+    glUseProgram( 0 );
+
+}
+
+void onReshapeCallBack(int width, int height)
+{
+    glEnable(GL_DEPTH_TEST);
+    glClearColor( CLEAR_COLOR );
+    glDisable(GL_CULL_FACE);
+    glViewport(0, 0, width, height);
+}
+
+void onIdleCallBack()
+{
+    glutPostRedisplay();
+}
+
+
+int main( int argc, char *argv[] )
+{
+
+    mywindow.registerKeyCallback( onKeyCallback );
+    mywindow.registerMouseCallback( onMouseCallback );
+    mywindow.registerMotionCallback( onMotionCallBack );
+    mywindow.registerLoopCallback( onLoopCallBack );
+    mywindow.registerReshapeCallback( onReshapeCallBack );
+    mywindow.registerIdleCallback( onIdleCallBack );
+    mywindow.registerLoadCallback( onLoadCallBack );
+    mywindow.init();
+    return 0;
+}
