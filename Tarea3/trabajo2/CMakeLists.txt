@@ -28,7 +28,7 @@ if( WIN32 )
 
 elseif( UNIX AND NOT APPLE )
 
-    message( "Trabajo 2 - linux" )
+    message( "Trabajo 3 - linux" )
     add_executable( main_5.out 
                     main_5.cpp 
                     Window.cpp 
@@ -56,6 +56,11 @@ elseif( UNIX AND NOT APPLE )
 
 elseif( APPLE )
 
-    message( "Trabajo 2 - macOS" )
+    message( "Trabajo 3 - macOS" )
+    add_executable( main_5.out main_5.cpp )
+    target_link_libraries( main_5.out cat1gl miniengine glfw
+                           ${OPENGL_LIBRARIES} 
+                           ${GLUT_LIBRARY}
+                           GLEW::GLEW )
 
 endif()

@@ -38,6 +38,11 @@ elseif( UNIX AND NOT APPLE )
 elseif( APPLE )
 
     message( "GENERATING MAKEFILES/PROJECTS FOR MACOS" )
+    find_package( OpenGL REQUIRED )
+    find_package( GLUT REQUIRED )
+    find_package( GLEW REQUIRED )
+
+    include_directories( ${GLUT_INCLUDE_DIRS} )
 
 endif()
 

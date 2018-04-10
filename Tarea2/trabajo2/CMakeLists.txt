@@ -56,4 +56,10 @@ elseif( APPLE )
 
     message( "Trabajo 2 - macOS" )
 
+    add_executable( main_5.out main_5.cpp )
+    target_link_libraries( main_5.out cat1gl miniengine glfw
+                           ${OPENGL_LIBRARIES} 
+                           ${GLUT_LIBRARY}
+                           GLEW::GLEW )
+
 endif()
