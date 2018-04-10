@@ -9,7 +9,11 @@
 #define GLEW_STATIC
 #include <GL/glew.h>
 
-#include <GL/glut.h>
+#ifdef __APPLE__
+    #include "GLUT/glut.h"
+#else
+    #include <GL/glut.h>
+#endif
 
 //#include <GLFW/glfw3.h>
 

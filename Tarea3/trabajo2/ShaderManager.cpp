@@ -13,6 +13,7 @@ namespace graphics
 
         GLuint _vShader, _fShader, _program;
 
+        /*
         _vShader = createShader( "../res/shaders/basic_vs.glsl", GL_VERTEX_SHADER );
         _fShader = createShader( "../res/shaders/basic_fs.glsl", GL_FRAGMENT_SHADER );
         _program = createProgram( _vShader, _fShader );
@@ -24,21 +25,22 @@ namespace graphics
         _program = createProgram( _vShader, _fShader );
 
         programs["basic3d"] = _program;
+        */
 
-
+        
         _vShader = createShader( "../res/shaders/basicVertexShader3d_with_color.glsl", GL_VERTEX_SHADER );
         _fShader = createShader( "../res/shaders/basicFragmentShader3d_with_color.glsl", GL_FRAGMENT_SHADER );
         _program = createProgram( _vShader, _fShader );
 
         programs["color"] = _program;
 
-
+        /*
         _vShader = createShader( "../res/shaders/baseVertexShader3d_with_lighting.glsl", GL_VERTEX_SHADER );
         _fShader = createShader( "../res/shaders/baseFragmentShader3d_with_lighting.glsl", GL_FRAGMENT_SHADER );
         _program = createProgram( _vShader, _fShader );
 
         programs["basiclighting"] = _program;
-
+        */
         _vShader = createShader( "../res/shaders/multilight_vs.glsl", GL_VERTEX_SHADER );
         _fShader = createShader( "../res/shaders/multilight_fs.glsl", GL_FRAGMENT_SHADER );
         _program = createProgram( _vShader, _fShader );
