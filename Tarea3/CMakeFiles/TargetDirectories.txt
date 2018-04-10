@@ -1,5 +1,5 @@
-/home/leticia/Videos/Tarea2/CMakeFiles/edit_cache.dir
-/home/leticia/Videos/Tarea2/CMakeFiles/rebuild_cache.dir
-/home/leticia/Videos/Tarea2/trabajo2/CMakeFiles/edit_cache.dir
-/home/leticia/Videos/Tarea2/trabajo2/CMakeFiles/rebuild_cache.dir
-/home/leticia/Videos/Tarea2/trabajo2/CMakeFiles/main_5.out.dir
+/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea3/CMakeFiles/edit_cache.dir
+/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea3/CMakeFiles/rebuild_cache.dir
+/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea3/trabajo2/CMakeFiles/edit_cache.dir
+/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea3/trabajo2/CMakeFiles/rebuild_cache.dir
+/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea3/trabajo2/CMakeFiles/main_5.out.dir

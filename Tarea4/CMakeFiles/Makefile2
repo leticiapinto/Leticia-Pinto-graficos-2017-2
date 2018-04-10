@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4
+CMAKE_SOURCE_DIR = /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4
+CMAKE_BINARY_DIR = /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4
 
 #=============================================================================
 # Directory level rules for directory trabajo2
@@ -84,7 +84,7 @@ trabajo2/preinstall:
 trabajo2/CMakeFiles/main_5.out.dir/all:
 	$(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/depend
 	$(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target main_5.out"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target main_5.out"
 .PHONY : trabajo2/CMakeFiles/main_5.out.dir/all
 
 # Include target in all.
@@ -94,9 +94,9 @@ all: trabajo2/CMakeFiles/main_5.out.dir/all
 
 # Build rule for subdir invocation for target.
 trabajo2/CMakeFiles/main_5.out.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 trabajo2/CMakeFiles/main_5.out.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles 0
 .PHONY : trabajo2/CMakeFiles/main_5.out.dir/rule
 
 # Convenience name for target.

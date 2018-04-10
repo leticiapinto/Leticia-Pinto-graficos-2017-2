@@ -1285,3 +1285,115 @@ Linking C executable cmTC_4c0e8
 make[1]: Leaving directory '/home/leticia/Videos/OPENGL/CMakeFiles/CMakeTmp'
 
 
+Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
+Change Dir: /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_20068/fast"
+/usr/bin/make -f CMakeFiles/cmTC_20068.dir/build.make CMakeFiles/cmTC_20068.dir/build
+make[1]: Entering directory '/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_20068.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_20068.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_20068
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20068.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTC_20068.dir/CheckFunctionExists.c.o  -o cmTC_20068 /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
+make[1]: Leaving directory '/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9a241/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9a241.dir/build.make CMakeFiles/cmTC_9a241.dir/build
+make[1]: Entering directory '/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9a241.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_9a241.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9a241
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9a241.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTC_9a241.dir/CheckFunctionExists.c.o  -o cmTC_9a241 
+make[1]: Leaving directory '/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp'
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6b268/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6b268.dir/build.make CMakeFiles/cmTC_6b268.dir/build
+make[1]: Entering directory '/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6b268.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_6b268.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6b268
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6b268.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTC_6b268.dir/CheckFunctionExists.c.o  -o cmTC_6b268 
+make[1]: Leaving directory '/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp'
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5762c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5762c.dir/build.make CMakeFiles/cmTC_5762c.dir/build
+make[1]: Entering directory '/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5762c.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_5762c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5762c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5762c.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTC_5762c.dir/CheckFunctionExists.c.o  -o cmTC_5762c 
+make[1]: Leaving directory '/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp'
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_39582/fast"
+/usr/bin/make -f CMakeFiles/cmTC_39582.dir/build.make CMakeFiles/cmTC_39582.dir/build
+make[1]: Entering directory '/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_39582.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_39582.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_39582
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39582.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTC_39582.dir/CheckFunctionExists.c.o  -o cmTC_39582 
+make[1]: Leaving directory '/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp'
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_71f28/fast"
+/usr/bin/make -f CMakeFiles/cmTC_71f28.dir/build.make CMakeFiles/cmTC_71f28.dir/build
+make[1]: Entering directory '/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_71f28.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTC_71f28.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_71f28
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71f28.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTC_71f28.dir/CheckFunctionExists.c.o  -o cmTC_71f28 -lICE 
+make[1]: Leaving directory '/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0a133/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0a133.dir/build.make CMakeFiles/cmTC_0a133.dir/build
+make[1]: Entering directory '/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0a133.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_0a133.dir/CheckIncludeFile.c.o   -c /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_0a133
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0a133.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_0a133.dir/CheckIncludeFile.c.o  -o cmTC_0a133 
+make[1]: Leaving directory '/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_57602/fast"
+/usr/bin/make -f CMakeFiles/cmTC_57602.dir/build.make CMakeFiles/cmTC_57602.dir/build
+make[1]: Entering directory '/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_57602.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_57602.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_57602
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57602.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_57602.dir/CheckFunctionExists.c.o  -o cmTC_57602 -lpthread 
+make[1]: Leaving directory '/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/CMakeFiles/CMakeTmp'
+
+

@@ -48,18 +48,18 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4
+CMAKE_SOURCE_DIR = /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4
+CMAKE_BINARY_DIR = /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(CMAKE_COMMAND) -E cmake_progress_start /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/CMakeFiles/progress.marks
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f CMakeFiles/Makefile2 trabajo2/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles 0
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(CMAKE_COMMAND) -E cmake_progress_start /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/CMakeFiles/progress.marks
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f CMakeFiles/Makefile2 trabajo2/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f CMakeFiles/Makefile2 trabajo2/clean
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f CMakeFiles/Makefile2 trabajo2/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f CMakeFiles/Makefile2 trabajo2/preinstall
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f CMakeFiles/Makefile2 trabajo2/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f CMakeFiles/Makefile2 trabajo2/preinstall
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f CMakeFiles/Makefile2 trabajo2/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 trabajo2/CMakeFiles/main_5.out.dir/rule:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f CMakeFiles/Makefile2 trabajo2/CMakeFiles/main_5.out.dir/rule
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f CMakeFiles/Makefile2 trabajo2/CMakeFiles/main_5.out.dir/rule
 .PHONY : trabajo2/CMakeFiles/main_5.out.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ main_5.out: trabajo2/CMakeFiles/main_5.out.dir/rule
 
 # fast build rule for target.
 main_5.out/fast:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/build
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/build
 .PHONY : main_5.out/fast
 
 IndexBuffer.o: IndexBuffer.cpp.o
@@ -131,7 +131,7 @@ IndexBuffer.o: IndexBuffer.cpp.o
 
 # target to build an object file
 IndexBuffer.cpp.o:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o
 .PHONY : IndexBuffer.cpp.o
 
 IndexBuffer.i: IndexBuffer.cpp.i
@@ -140,7 +140,7 @@ IndexBuffer.i: IndexBuffer.cpp.i
 
 # target to preprocess a source file
 IndexBuffer.cpp.i:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.i
 .PHONY : IndexBuffer.cpp.i
 
 IndexBuffer.s: IndexBuffer.cpp.s
@@ -149,7 +149,7 @@ IndexBuffer.s: IndexBuffer.cpp.s
 
 # target to generate assembly for a file
 IndexBuffer.cpp.s:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.s
 .PHONY : IndexBuffer.cpp.s
 
 Mesh.o: Mesh.cpp.o
@@ -158,7 +158,7 @@ Mesh.o: Mesh.cpp.o
 
 # target to build an object file
 Mesh.cpp.o:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o
 .PHONY : Mesh.cpp.o
 
 Mesh.i: Mesh.cpp.i
@@ -167,7 +167,7 @@ Mesh.i: Mesh.cpp.i
 
 # target to preprocess a source file
 Mesh.cpp.i:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.i
 .PHONY : Mesh.cpp.i
 
 Mesh.s: Mesh.cpp.s
@@ -176,7 +176,7 @@ Mesh.s: Mesh.cpp.s
 
 # target to generate assembly for a file
 Mesh.cpp.s:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.s
 .PHONY : Mesh.cpp.s
 
 MeshBuilder.o: MeshBuilder.cpp.o
@@ -185,7 +185,7 @@ MeshBuilder.o: MeshBuilder.cpp.o
 
 # target to build an object file
 MeshBuilder.cpp.o:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o
 .PHONY : MeshBuilder.cpp.o
 
 MeshBuilder.i: MeshBuilder.cpp.i
@@ -194,7 +194,7 @@ MeshBuilder.i: MeshBuilder.cpp.i
 
 # target to preprocess a source file
 MeshBuilder.cpp.i:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.i
 .PHONY : MeshBuilder.cpp.i
 
 MeshBuilder.s: MeshBuilder.cpp.s
@@ -203,7 +203,7 @@ MeshBuilder.s: MeshBuilder.cpp.s
 
 # target to generate assembly for a file
 MeshBuilder.cpp.s:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.s
 .PHONY : MeshBuilder.cpp.s
 
 ShaderManager.o: ShaderManager.cpp.o
@@ -212,7 +212,7 @@ ShaderManager.o: ShaderManager.cpp.o
 
 # target to build an object file
 ShaderManager.cpp.o:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o
 .PHONY : ShaderManager.cpp.o
 
 ShaderManager.i: ShaderManager.cpp.i
@@ -221,7 +221,7 @@ ShaderManager.i: ShaderManager.cpp.i
 
 # target to preprocess a source file
 ShaderManager.cpp.i:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.i
 .PHONY : ShaderManager.cpp.i
 
 ShaderManager.s: ShaderManager.cpp.s
@@ -230,7 +230,7 @@ ShaderManager.s: ShaderManager.cpp.s
 
 # target to generate assembly for a file
 ShaderManager.cpp.s:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.s
 .PHONY : ShaderManager.cpp.s
 
 Texture2D.o: Texture2D.cpp.o
@@ -239,7 +239,7 @@ Texture2D.o: Texture2D.cpp.o
 
 # target to build an object file
 Texture2D.cpp.o:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Texture2D.cpp.o
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Texture2D.cpp.o
 .PHONY : Texture2D.cpp.o
 
 Texture2D.i: Texture2D.cpp.i
@@ -248,7 +248,7 @@ Texture2D.i: Texture2D.cpp.i
 
 # target to preprocess a source file
 Texture2D.cpp.i:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Texture2D.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Texture2D.cpp.i
 .PHONY : Texture2D.cpp.i
 
 Texture2D.s: Texture2D.cpp.s
@@ -257,7 +257,7 @@ Texture2D.s: Texture2D.cpp.s
 
 # target to generate assembly for a file
 Texture2D.cpp.s:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Texture2D.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Texture2D.cpp.s
 .PHONY : Texture2D.cpp.s
 
 VertexArray.o: VertexArray.cpp.o
@@ -266,7 +266,7 @@ VertexArray.o: VertexArray.cpp.o
 
 # target to build an object file
 VertexArray.cpp.o:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o
 .PHONY : VertexArray.cpp.o
 
 VertexArray.i: VertexArray.cpp.i
@@ -275,7 +275,7 @@ VertexArray.i: VertexArray.cpp.i
 
 # target to preprocess a source file
 VertexArray.cpp.i:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.i
 .PHONY : VertexArray.cpp.i
 
 VertexArray.s: VertexArray.cpp.s
@@ -284,7 +284,7 @@ VertexArray.s: VertexArray.cpp.s
 
 # target to generate assembly for a file
 VertexArray.cpp.s:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.s
 .PHONY : VertexArray.cpp.s
 
 VertexBuffer.o: VertexBuffer.cpp.o
@@ -293,7 +293,7 @@ VertexBuffer.o: VertexBuffer.cpp.o
 
 # target to build an object file
 VertexBuffer.cpp.o:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o
 .PHONY : VertexBuffer.cpp.o
 
 VertexBuffer.i: VertexBuffer.cpp.i
@@ -302,7 +302,7 @@ VertexBuffer.i: VertexBuffer.cpp.i
 
 # target to preprocess a source file
 VertexBuffer.cpp.i:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.i
 .PHONY : VertexBuffer.cpp.i
 
 VertexBuffer.s: VertexBuffer.cpp.s
@@ -311,7 +311,7 @@ VertexBuffer.s: VertexBuffer.cpp.s
 
 # target to generate assembly for a file
 VertexBuffer.cpp.s:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.s
 .PHONY : VertexBuffer.cpp.s
 
 Window.o: Window.cpp.o
@@ -320,7 +320,7 @@ Window.o: Window.cpp.o
 
 # target to build an object file
 Window.cpp.o:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o
 .PHONY : Window.cpp.o
 
 Window.i: Window.cpp.i
@@ -329,7 +329,7 @@ Window.i: Window.cpp.i
 
 # target to preprocess a source file
 Window.cpp.i:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.i
 .PHONY : Window.cpp.i
 
 Window.s: Window.cpp.s
@@ -338,7 +338,7 @@ Window.s: Window.cpp.s
 
 # target to generate assembly for a file
 Window.cpp.s:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.s
 .PHONY : Window.cpp.s
 
 main_5.o: main_5.cpp.o
@@ -347,7 +347,7 @@ main_5.o: main_5.cpp.o
 
 # target to build an object file
 main_5.cpp.o:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o
 .PHONY : main_5.cpp.o
 
 main_5.i: main_5.cpp.i
@@ -356,7 +356,7 @@ main_5.i: main_5.cpp.i
 
 # target to preprocess a source file
 main_5.cpp.i:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.i
 .PHONY : main_5.cpp.i
 
 main_5.s: main_5.cpp.s
@@ -365,7 +365,7 @@ main_5.s: main_5.cpp.s
 
 # target to generate assembly for a file
 main_5.cpp.s:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.s
 .PHONY : main_5.cpp.s
 
 stb_image.o: stb_image.cpp.o
@@ -374,7 +374,7 @@ stb_image.o: stb_image.cpp.o
 
 # target to build an object file
 stb_image.cpp.o:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/stb_image.cpp.o
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/stb_image.cpp.o
 .PHONY : stb_image.cpp.o
 
 stb_image.i: stb_image.cpp.i
@@ -383,7 +383,7 @@ stb_image.i: stb_image.cpp.i
 
 # target to preprocess a source file
 stb_image.cpp.i:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/stb_image.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/stb_image.cpp.i
 .PHONY : stb_image.cpp.i
 
 stb_image.s: stb_image.cpp.s
@@ -392,7 +392,7 @@ stb_image.s: stb_image.cpp.s
 
 # target to generate assembly for a file
 stb_image.cpp.s:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/stb_image.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(MAKE) -f trabajo2/CMakeFiles/main_5.out.dir/build.make trabajo2/CMakeFiles/main_5.out.dir/stb_image.cpp.s
 .PHONY : stb_image.cpp.s
 
 # Help Target
@@ -445,6 +445,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

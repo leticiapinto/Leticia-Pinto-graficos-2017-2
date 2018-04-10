@@ -33,7 +33,8 @@
 
 #ifdef __APPLE__  // include Mac OS X verions of headers
 #  include <GL/glew.h>// must be included before <GLUT/glut.h>
-#  include <GLUT/glut.h>
+//#  include <GLUT/glut.h>
+#include "GLUT/glut.h"
 #else // non-Mac OS X operating systems
 #  include <GL/glew.h>
 #  include <GL/glut.h>

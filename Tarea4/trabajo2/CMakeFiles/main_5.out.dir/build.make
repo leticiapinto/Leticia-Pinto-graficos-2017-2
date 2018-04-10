@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4
+CMAKE_SOURCE_DIR = /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4
+CMAKE_BINARY_DIR = /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4
 
 # Include any dependencies generated for this target.
 include trabajo2/CMakeFiles/main_5.out.dir/depend.make
@@ -59,16 +59,16 @@ include trabajo2/CMakeFiles/main_5.out.dir/flags.make
 
 trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
 trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o: trabajo2/main_5.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/main_5.cpp.o -c /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/main_5.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o"
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/main_5.cpp.o -c /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/main_5.cpp
 
 trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/main_5.cpp.i"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/main_5.cpp > CMakeFiles/main_5.out.dir/main_5.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/main_5.cpp > CMakeFiles/main_5.out.dir/main_5.cpp.i
 
 trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/main_5.cpp.s"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/main_5.cpp -o CMakeFiles/main_5.out.dir/main_5.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/main_5.cpp -o CMakeFiles/main_5.out.dir/main_5.cpp.s
 
 trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o.requires:
 
@@ -83,16 +83,16 @@ trabajo2/CMakeFiles/main_5.out.dir/main_5.cpp.o.provides.build: trabajo2/CMakeFi
 
 trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
 trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o: trabajo2/Window.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/Window.cpp.o -c /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o"
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/Window.cpp.o -c /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Window.cpp
 
 trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/Window.cpp.i"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Window.cpp > CMakeFiles/main_5.out.dir/Window.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Window.cpp > CMakeFiles/main_5.out.dir/Window.cpp.i
 
 trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/Window.cpp.s"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Window.cpp -o CMakeFiles/main_5.out.dir/Window.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Window.cpp -o CMakeFiles/main_5.out.dir/Window.cpp.s
 
 trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o.requires:
 
@@ -107,16 +107,16 @@ trabajo2/CMakeFiles/main_5.out.dir/Window.cpp.o.provides.build: trabajo2/CMakeFi
 
 trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
 trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o: trabajo2/ShaderManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/ShaderManager.cpp.o -c /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/ShaderManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o"
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/ShaderManager.cpp.o -c /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/ShaderManager.cpp
 
 trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/ShaderManager.cpp.i"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/ShaderManager.cpp > CMakeFiles/main_5.out.dir/ShaderManager.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/ShaderManager.cpp > CMakeFiles/main_5.out.dir/ShaderManager.cpp.i
 
 trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/ShaderManager.cpp.s"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/ShaderManager.cpp -o CMakeFiles/main_5.out.dir/ShaderManager.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/ShaderManager.cpp -o CMakeFiles/main_5.out.dir/ShaderManager.cpp.s
 
 trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o.requires:
 
@@ -131,16 +131,16 @@ trabajo2/CMakeFiles/main_5.out.dir/ShaderManager.cpp.o.provides.build: trabajo2/
 
 trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
 trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o: trabajo2/VertexBuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o -c /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/VertexBuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o"
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o -c /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/VertexBuffer.cpp
 
 trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/VertexBuffer.cpp.i"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/VertexBuffer.cpp > CMakeFiles/main_5.out.dir/VertexBuffer.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/VertexBuffer.cpp > CMakeFiles/main_5.out.dir/VertexBuffer.cpp.i
 
 trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/VertexBuffer.cpp.s"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/VertexBuffer.cpp -o CMakeFiles/main_5.out.dir/VertexBuffer.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/VertexBuffer.cpp -o CMakeFiles/main_5.out.dir/VertexBuffer.cpp.s
 
 trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o.requires:
 
@@ -155,16 +155,16 @@ trabajo2/CMakeFiles/main_5.out.dir/VertexBuffer.cpp.o.provides.build: trabajo2/C
 
 trabajo2/CMakeFiles/main_5.out.dir/Texture2D.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
 trabajo2/CMakeFiles/main_5.out.dir/Texture2D.cpp.o: trabajo2/Texture2D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/Texture2D.cpp.o"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/Texture2D.cpp.o -c /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Texture2D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/Texture2D.cpp.o"
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/Texture2D.cpp.o -c /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Texture2D.cpp
 
 trabajo2/CMakeFiles/main_5.out.dir/Texture2D.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/Texture2D.cpp.i"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Texture2D.cpp > CMakeFiles/main_5.out.dir/Texture2D.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Texture2D.cpp > CMakeFiles/main_5.out.dir/Texture2D.cpp.i
 
 trabajo2/CMakeFiles/main_5.out.dir/Texture2D.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/Texture2D.cpp.s"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Texture2D.cpp -o CMakeFiles/main_5.out.dir/Texture2D.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Texture2D.cpp -o CMakeFiles/main_5.out.dir/Texture2D.cpp.s
 
 trabajo2/CMakeFiles/main_5.out.dir/Texture2D.cpp.o.requires:
 
@@ -179,16 +179,16 @@ trabajo2/CMakeFiles/main_5.out.dir/Texture2D.cpp.o.provides.build: trabajo2/CMak
 
 trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
 trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o: trabajo2/IndexBuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o -c /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/IndexBuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o"
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o -c /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/IndexBuffer.cpp
 
 trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/IndexBuffer.cpp.i"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/IndexBuffer.cpp > CMakeFiles/main_5.out.dir/IndexBuffer.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/IndexBuffer.cpp > CMakeFiles/main_5.out.dir/IndexBuffer.cpp.i
 
 trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/IndexBuffer.cpp.s"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/IndexBuffer.cpp -o CMakeFiles/main_5.out.dir/IndexBuffer.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/IndexBuffer.cpp -o CMakeFiles/main_5.out.dir/IndexBuffer.cpp.s
 
 trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o.requires:
 
@@ -203,16 +203,16 @@ trabajo2/CMakeFiles/main_5.out.dir/IndexBuffer.cpp.o.provides.build: trabajo2/CM
 
 trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
 trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o: trabajo2/VertexArray.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/VertexArray.cpp.o -c /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/VertexArray.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o"
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/VertexArray.cpp.o -c /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/VertexArray.cpp
 
 trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/VertexArray.cpp.i"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/VertexArray.cpp > CMakeFiles/main_5.out.dir/VertexArray.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/VertexArray.cpp > CMakeFiles/main_5.out.dir/VertexArray.cpp.i
 
 trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/VertexArray.cpp.s"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/VertexArray.cpp -o CMakeFiles/main_5.out.dir/VertexArray.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/VertexArray.cpp -o CMakeFiles/main_5.out.dir/VertexArray.cpp.s
 
 trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o.requires:
 
@@ -227,16 +227,16 @@ trabajo2/CMakeFiles/main_5.out.dir/VertexArray.cpp.o.provides.build: trabajo2/CM
 
 trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
 trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o: trabajo2/Mesh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/Mesh.cpp.o -c /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Mesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o"
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/Mesh.cpp.o -c /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Mesh.cpp
 
 trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/Mesh.cpp.i"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Mesh.cpp > CMakeFiles/main_5.out.dir/Mesh.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Mesh.cpp > CMakeFiles/main_5.out.dir/Mesh.cpp.i
 
 trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/Mesh.cpp.s"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Mesh.cpp -o CMakeFiles/main_5.out.dir/Mesh.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/Mesh.cpp -o CMakeFiles/main_5.out.dir/Mesh.cpp.s
 
 trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o.requires:
 
@@ -251,16 +251,16 @@ trabajo2/CMakeFiles/main_5.out.dir/Mesh.cpp.o.provides.build: trabajo2/CMakeFile
 
 trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
 trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o: trabajo2/MeshBuilder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o -c /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/MeshBuilder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o"
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o -c /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/MeshBuilder.cpp
 
 trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/MeshBuilder.cpp.i"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/MeshBuilder.cpp > CMakeFiles/main_5.out.dir/MeshBuilder.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/MeshBuilder.cpp > CMakeFiles/main_5.out.dir/MeshBuilder.cpp.i
 
 trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/MeshBuilder.cpp.s"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/MeshBuilder.cpp -o CMakeFiles/main_5.out.dir/MeshBuilder.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/MeshBuilder.cpp -o CMakeFiles/main_5.out.dir/MeshBuilder.cpp.s
 
 trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o.requires:
 
@@ -275,16 +275,16 @@ trabajo2/CMakeFiles/main_5.out.dir/MeshBuilder.cpp.o.provides.build: trabajo2/CM
 
 trabajo2/CMakeFiles/main_5.out.dir/stb_image.cpp.o: trabajo2/CMakeFiles/main_5.out.dir/flags.make
 trabajo2/CMakeFiles/main_5.out.dir/stb_image.cpp.o: trabajo2/stb_image.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/stb_image.cpp.o"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/stb_image.cpp.o -c /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/stb_image.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object trabajo2/CMakeFiles/main_5.out.dir/stb_image.cpp.o"
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_5.out.dir/stb_image.cpp.o -c /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/stb_image.cpp
 
 trabajo2/CMakeFiles/main_5.out.dir/stb_image.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_5.out.dir/stb_image.cpp.i"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/stb_image.cpp > CMakeFiles/main_5.out.dir/stb_image.cpp.i
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/stb_image.cpp > CMakeFiles/main_5.out.dir/stb_image.cpp.i
 
 trabajo2/CMakeFiles/main_5.out.dir/stb_image.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_5.out.dir/stb_image.cpp.s"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/stb_image.cpp -o CMakeFiles/main_5.out.dir/stb_image.cpp.s
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/stb_image.cpp -o CMakeFiles/main_5.out.dir/stb_image.cpp.s
 
 trabajo2/CMakeFiles/main_5.out.dir/stb_image.cpp.o.requires:
 
@@ -335,8 +335,8 @@ trabajo2/main_5.out: /usr/lib/x86_64-linux-gnu/libICE.so
 trabajo2/main_5.out: /usr/lib/x86_64-linux-gnu/libX11.so
 trabajo2/main_5.out: /usr/lib/x86_64-linux-gnu/libXext.so
 trabajo2/main_5.out: trabajo2/CMakeFiles/main_5.out.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable main_5.out"
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main_5.out.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable main_5.out"
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main_5.out.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 trabajo2/CMakeFiles/main_5.out.dir/build: trabajo2/main_5.out
@@ -357,10 +357,10 @@ trabajo2/CMakeFiles/main_5.out.dir/requires: trabajo2/CMakeFiles/main_5.out.dir/
 .PHONY : trabajo2/CMakeFiles/main_5.out.dir/requires
 
 trabajo2/CMakeFiles/main_5.out.dir/clean:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && $(CMAKE_COMMAND) -P CMakeFiles/main_5.out.dir/cmake_clean.cmake
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 && $(CMAKE_COMMAND) -P CMakeFiles/main_5.out.dir/cmake_clean.cmake
 .PHONY : trabajo2/CMakeFiles/main_5.out.dir/clean
 
 trabajo2/CMakeFiles/main_5.out.dir/depend:
-	cd /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4 /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 /media/leticia/DATOS/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/CMakeFiles/main_5.out.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4 /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2 /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea4/trabajo2/CMakeFiles/main_5.out.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : trabajo2/CMakeFiles/main_5.out.dir/depend
 

@@ -73,7 +73,7 @@ uniform int Texture_app_flag;     //descomentar para cuando pase los comandos pa
 const float fogDensity = 0.1f;
 const vec4 fogColor = vec4(0.5, 0.5, 0.5, 1.0);
 
-out vec4 FragColor; //comentar para 120
+//out vec4 FragColor; //comentar para 120
 
 
 // function prototypes
@@ -81,7 +81,7 @@ vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir);
 vec3 CalcPointLight(PointLight light, vec3 normal, vec3 fragPos, vec3 viewDir);
 vec3 CalcSpotLight(SpotLight light, vec3 normal, vec3 fragPos, vec3 viewDir);
 float getFogFactor(float fogCoord, int equation);
-vec4 Texture2D(int Texture_app_flag, vec4 color);
+vec4 text2D(int Texture_app_flag, vec4 color);
 
 void main()
 {    
@@ -112,7 +112,7 @@ void main()
 	//FragColor = vec4(result, 1.0);
     //gl_FragColor = color; 
     //gl_FragColor = Texture(Texture_app_flag, color); //descomentar para 120
-    gl_FragColor = Texture2D(Texture_app_flag, color); //comentar para 120
+    gl_FragColor = text2D(Texture_app_flag, color); //comentar para 120
 }
 
 // calculates the color when using a directional light.
@@ -200,7 +200,7 @@ float getFogFactor(float fogCoord, int equation)
 	return result;
 }
 
-vec4 Texture2D(int Texture_app_flag, vec4 color)
+vec4 text2D(int Texture_app_flag, vec4 color)
 {
     vec4 fColor;
     if (Texture_app_flag == 0)
@@ -209,11 +209,11 @@ vec4 Texture2D(int Texture_app_flag, vec4 color)
     }
     else if (Texture_app_flag == 2)
     {
-        fColor = texture( texture1, TexCoord );
+        fColor = texture2D( texture1, TexCoord );
     }
     else if (Texture_app_flag == 1)
     {
-        fColor = color * texture( texture1, TexCoord );
+        fColor = color * texture2D( texture1, TexCoord );
     }
     return fColor;    
 }

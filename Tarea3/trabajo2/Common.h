@@ -128,18 +128,20 @@ namespace graphics
         }
 
     };
-
+    /*
     struct LTri
     {
         GLuint i1;
         GLuint i2;
         GLuint i3;
     };
+    */
 
-    union Ind3
+    struct Ind3
+    //union Ind3
     {
         GLuint buff[3];
-        LTri tri;
+        //LTri tri;
 
         Ind3()
         {
