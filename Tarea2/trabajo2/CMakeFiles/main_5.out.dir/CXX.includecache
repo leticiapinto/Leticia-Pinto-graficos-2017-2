@@ -18,7 +18,7 @@ iostream
 GL/glew.h
 -
 GLUT/glut.h
--
+/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/trabajo2/GLUT/glut.h
 GL/glew.h
 -
 GL/glut.h
@@ -149,6 +149,8 @@ iostream
 /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/Common.h
 GL/glew.h
 -
+GLUT/glut.h
+/home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/trabajo2/GLUT/glut.h
 GL/glut.h
 -
 
