@@ -1,4 +1,4 @@
-# Install script for directory: /home/leticia/Videos/OPENGL/trabajo2
+# Install script for directory: /home/leticia/Music/Leticia-Pinto-graficos-2017-2/Tarea2/trabajo2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
