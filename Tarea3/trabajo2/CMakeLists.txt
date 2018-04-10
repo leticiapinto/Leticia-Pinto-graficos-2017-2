@@ -57,7 +57,21 @@ elseif( UNIX AND NOT APPLE )
 elseif( APPLE )
 
     message( "Trabajo 3 - macOS" )
-    add_executable( main_5.out main_5.cpp )
+    add_executable( main_5.out 
+                    main_5.cpp 
+                    Window.cpp 
+                    ShaderManager.cpp
+                    VertexBuffer.cpp
+                    Texture2D.cpp
+                    IndexBuffer.cpp
+                    VertexArray.cpp
+                    Mesh.cpp
+                    MeshBuilder.cpp
+                    Angel-yjc.h
+                    vec.h 
+                    mat-yjc-new.h
+                    CheckError.h
+                    )
     target_link_libraries( main_5.out cat1gl miniengine glfw
                            ${OPENGL_LIBRARIES} 
                            ${GLUT_LIBRARY}
